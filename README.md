@@ -5,7 +5,9 @@ CleanWhite is a clean, elegant, full functional blog theme for hugo.
 It is based on [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io)
 and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll).
 
+<kbd>
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/fullscreenshot.png)
+</kbd>
 
 ## Installation
 
@@ -48,9 +50,9 @@ disqus_proxy = "http://yourdisqusproxy.com"
 BCT
 ```toml
 algolia_search = true
-algolia_appId = "WM4BEY1UDN"
-algolia_indexName = "blog"
-algolia_apiKey = "090c4a77b8bd4b8d2f2c1262afbc4be2"
+algolia_appId = "your_app_id"
+algolia_indexName = "your_index_name"
+algolia_apiKey = "your_api_key"
 ```
 
 ### Google Analytics
