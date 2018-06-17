@@ -1,0 +1,17 @@
+<!-- disqus 评论框 end -->
+<div id="disqus-comment"></div>
+{{ if .Site.Params.disqus_proxy }}
+<script src="/js/iDisqus.js"></script>
+<script>
+var disq = new iDisqus('disqus-comment', {
+    forum: '{{ .Site.DisqusShortname}}',
+    api: '{{ .Site.Params.disqus_proxy }}',
+	site: '{{ .Site.Params.disqus_site }}',
+    mode: 1,
+    timeout: 5000,
+    init: true
+});
+</script>
+{{ else if .Site.DisqusShortname }}
+{{ template "_internal/disqus.html" . }}
+{{ end }}
