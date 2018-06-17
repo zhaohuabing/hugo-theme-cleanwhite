@@ -1,10 +1,10 @@
 # Clean White Theme for Hugo
 
-CleanWhite is a clean, elegant, full functional blog theme for hugo.
+CleanWhite is a clean, elegant, full functional blog theme for hugo. This is a live [demo site](https://zhaohuabing.com) using this theme.
 
 It is based on [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io)
 and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll).
-
+ 
 **Home**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/fullscreenshot.png)
 
