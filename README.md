@@ -51,14 +51,41 @@ TBC
 ```toml
 disqus_proxy = "http://yourdisqusproxy.com"
 ```
+
 ### Site Search with Algolia
-BCT
-```toml
-algolia_search = true
-algolia_appId = "your_app_id"
-algolia_indexName = "your_index_name"
-algolia_apiKey = "your_api_key"
+Go to the directory where you have your Hugo site and run the following commands:
+```bash
+npm init
+npm install atomic-algolia --save
 ```
+Next, open up the newly created package.json, where we’ll add an NPM script to update your index at Algolia. Find "scripts", and add the following:
+```josn
+"algolia": "atomic-algolia"
+```
+Algolia index output format has already been supported by cleanwhite theme, so you can just build your site, then you’ll find a file called algolia.json in the root, which we can use to update your index in Algolia.
+Generate index file:
+```bash
+hugo
+```
+Create a new file in the root of your Hugo project called .env, and add the following contents:
+```bash
+ALGOLIA_APP_ID={{ YOUR_APP_ID }}
+ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }}
+ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
+ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }}
+```
+Now you can push your index to Algolia by simply running:
+```bash
+npm run algolia
+```
+Add the following variables to your hugo site config so the search page can get access to algolia index data:
+ ```toml
+algolia_search = true
+algolia_appId = {{ YOUR_APP_ID }}
+algolia_indexName = {{ YOUR_INDEX_NAME }}
+algolia_apiKey = {{ YOUR_ADMIN_KEY }}
+```
+Open search page in your browser: http://localhost:1313/search
 
 ### Google Analytics
 
