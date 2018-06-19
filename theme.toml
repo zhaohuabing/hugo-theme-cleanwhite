@@ -3,9 +3,9 @@
 
 name = "Clean White"
 license = "Apache"
-licenselink = 
-description = "A clean, elegant hugo theme for blog"
-homepage = ""
+licenselink = "https://github.com/zhaohuabing/hugo-theme-cleanwhite/blob/master/LICENSE"
+description = "A clean, elegant blog theme for hugo"
+homepage = "https://github.com/zhaohuabing/hugo-theme-cleanwhite"
 tags = [ "minimal", "responsive", "blog","light", "clean", "search"]
 features = ["disqus", "site search", "responsive", "google analytics", "side bar"]
 min_version = 0.10
