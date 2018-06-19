@@ -34,7 +34,7 @@ $ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite themes/
 Run  Hugo Build-in Server Locally
 
 ```
-Hugo serve -t  hugo-theme-cleanwhite
+$ hugo serve -t  hugo-theme-cleanwhite
 ```
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
@@ -79,8 +79,8 @@ Follow this [tutorial](https://forestry.io/blog/search-with-algolia-in-hugo/#3-c
 
 Go to the directory where you have your Hugo site and run the following commands:
 ```bash
-npm init
-npm install atomic-algolia --save
+$ npm init
+$ npm install atomic-algolia --save
 ```
 Next, open up the newly created package.json, where we’ll add an NPM script to update your index at Algolia. Find "scripts", and add the following:
 ```josn
@@ -89,7 +89,7 @@ Next, open up the newly created package.json, where we’ll add an NPM script to
 Algolia index output format has already been supported by the CleanWhite theme, so you can just build your site, then you’ll find a file called algolia.json in the root, which we can use to update your index in Algolia.
 Generate index file:
 ```bash
-hugo
+$ hugo
 ```
 Create a new file in the root of your Hugo project called .env, and add the following contents:
 ```bash
@@ -100,7 +100,7 @@ ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }}
 ```
 Now you can push your index to Algolia by simply running:
 ```bash
-npm run algolia
+$ npm run algolia
 ```
 Add the following variables to your hugo site config so the search page can get access to algolia index data in the cloud:
  ```
@@ -120,3 +120,9 @@ googleAnalytics = "UA-XXXXX-X"
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
 Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
+
+## Thank
+Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
+
+## Feedback
+If you find any problems, please feel free to [raise an issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/new) or create a pull request to fix it. 
