@@ -1,11 +1,12 @@
 # Clean White Theme for Hugo
 
-CleanWhite is a clean, elegant, fully functional blog theme for Hugo. This is a live [demo site](https://zhaohuabing.com) using this theme.
+CleanWhite is a clean, elegant, fully functional blog theme for Hugo. Here is a live [demo site](https://zhaohuabing.com) using this theme.
 
 It is based on [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io)
 and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll).
- 
-##Screenshots
+
+## Screenshots
+
 **Home**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/fullscreenshot.png)
 
@@ -102,7 +103,7 @@ Now you can push your index to Algolia by simply running:
 npm run algolia
 ```
 Add the following variables to your hugo site config so the search page can get access to algolia index data in the cloud:
- ```toml
+ ```
 algolia_search = true
 algolia_appId = {{ YOUR_APP_ID }}
 algolia_indexName = {{ YOUR_INDEX_NAME }}
