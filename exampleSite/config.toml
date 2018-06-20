@@ -23,7 +23,7 @@ home = ["HTML", "RSS", "Algolia"]
   title_404 = "你来到了没有知识的荒原 :("
 
   # leancloud storage for page view counter
-  page_view_conter = true 
+  page_view_conter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
 
