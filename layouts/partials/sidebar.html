@@ -30,7 +30,7 @@
         <hr><h5><a href="">ABOUT ME</a></h5>
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-                <img src="{{ . }}" />
+            <img src="{{ . | absURL }}" />
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
                 <p>{{ . }}</p>

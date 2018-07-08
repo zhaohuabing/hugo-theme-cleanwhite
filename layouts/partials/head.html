@@ -11,22 +11,22 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     {{ end }}
     <meta name="keyword"  content="{{ .Site.Params.keyword }}">
-    <link rel="shortcut icon" href="{{ "/img/favicon.ico" | absURL }}">
+    <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}">
 
     <title>{{ if .Title }}{{ .Title }}-{{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
 
     <link rel="canonical" href="{{ .URL | absURL }}">
 
-	<link rel="stylesheet" href="/css/iDisqus.min.css" />
+    <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | absURL }}"/>
 	
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/hux-blog.min.css" | absURL }}">
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "/css/syntax.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}">
 
     <!-- Custom Fonts -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,11 +34,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     -->
     <!-- jQuery -->
-    <script src="{{ "/js/jquery.min.js" | absURL }}"></script>
+    <script src="{{ "js/jquery.min.js" | absURL }}"></script>
     
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ "/js/bootstrap.min.js" | absURL }}"></script>
+    <script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
     
     <!-- Custom Theme JavaScript -->
-    <script src="{{ "/js/hux-blog.min.js" | absURL }}"></script>
+    <script src="{{ "js/hux-blog.min.js" | absURL }}"></script>
 </head>

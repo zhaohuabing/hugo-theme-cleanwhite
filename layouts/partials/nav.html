@@ -26,13 +26,13 @@
                     </li>
                     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
                     <li>
-                        <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                        <a href="{{ "categories/" | absLangURL }}{{ $name | urlize }}">{{ $name }}</a>
                     </li>
                     {{ end }}
 
                     {{ if .Site.Params.algolia_search }}
 		            <li>
-		             <a href="{{ "/search/" | absURL }}">SEARCH <img src="\img\search.png" height="15" style="cursor: pointer;"></a>
+                        <a href="{{ "search" | absURL }}">SEARCH <img src="{{ "img/search.png" | absURL }}" height="15" style="cursor: pointer;"></a>
 		            </li>
                     {{ end }}
                 </ul>
