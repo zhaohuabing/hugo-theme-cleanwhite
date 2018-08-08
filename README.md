@@ -25,14 +25,14 @@ Go to the directory where you have your Hugo site and run:
 ```
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/zhaohuabing/hugo-cleanwhite-theme.git
+$ git clone https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
 ```
 
 If your site is already a git project, you may want to choose to add the cleanwhite theme as a submodule to avoid messing up your existing git repository.
 
 ```
 $ mkdir themes
-$ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite themes/hugo-theme-cleanwhite
+$ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite.git themes/hugo-theme-cleanwhite
 ```
 Run  Hugo Build-in Server Locally
 
