@@ -1,0 +1,34 @@
+
+<div class="entry-shang text-center">
+	<p>「真诚赞赏，手留余香」</p>
+	<button class="zs show-zs btn btn-bred">赞赏</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="{{ .Site.BaseURL }}"><img src="{{ "img/favicon.png" | absURL}}" />{{ .Site.Title }}</a></span>
+		<p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="{{ "img/zanshang/alipay-2.png" | absURL }}"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="{{ "img/zanshang/wechat-btn.png" | absURL }}"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="{{ "img/zanshang/alipay-btn.png" | absURL }}"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="{{ "js/zanshang.js" | absURL }}"></script>

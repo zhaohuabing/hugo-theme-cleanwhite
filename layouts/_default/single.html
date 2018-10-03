@@ -43,31 +43,34 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-		{{ if eq .Params.showtoc false }}
-		{{ else }}
-                <header>
-                <h2>TOC</h2>
-                </header>
-                {{.TableOfContents}}
-		{{ end }}
-		{{ .Content }}
-
-                <hr>
-
-                <ul class="pager">
-                    {{ if .Prev }}
-                    <li class="previous">
-                        <a href="{{ .Prev.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Prev.Title}}">&larr; Previous Post</a>
-                    </li>
-                    {{ end }}
-                    {{ if .Next }}
-                    <li class="next">
-                        <a href="{{ .Next.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Next.Title}}">Next Post &rarr;</a>
-                    </li>
-                    {{ end }}
-                </ul>
-
-            {{ partial "comments.html" . }}
+        		{{ if eq .Params.showtoc false }}
+        		{{ else }}
+                        <header>
+                        <h2>TOC</h2>
+                        </header>
+                        {{.TableOfContents}}
+        		{{ end }}
+        		{{ .Content }}
+        
+                {{ if .Site.Params.zanshang }}
+                    {{ partial "zanshang.html" . }}
+                {{ end }}
+        
+              <hr>
+              <ul class="pager">
+                  {{ if .Prev }}
+                  <li class="previous">
+                      <a href="{{ .Prev.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Prev.Title}}">&larr; Previous Post</a>
+                  </li>
+                  {{ end }}
+                  {{ if .Next }}
+                  <li class="next">
+                      <a href="{{ .Next.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Next.Title}}">Next Post &rarr;</a>
+                  </li>
+                  {{ end }}
+              </ul>
+  
+              {{ partial "comments.html" . }}
 
             </div>
             <!-- Sidebar Container -->
