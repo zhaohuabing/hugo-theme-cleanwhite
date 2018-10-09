@@ -129,7 +129,7 @@ Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
 
 ### Wechat Pay & Alipay Rewards
 
-You can enable Wechat Pay & Alipay to allow readers send you reward money. If they like your articles, you may even make profit from your writing.
+You can enable Wechat Pay & Alipay to allow readers send you money. So if they like your articles, you may even get rewards from your writing. Now you must be motivated to write more.
 
 * Enable Wechat Pay & Alipay in the site config
 ```toml
@@ -144,4 +144,4 @@ Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/hu
 ## Feedback
 If you find any problems, please feel free to [raise an issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/new) or create a pull request to fix it. 
 
-Star this repository if you think it's helpful, thanks!
+I will appreciate your staring this repository if you think it's helpful, thanks!
