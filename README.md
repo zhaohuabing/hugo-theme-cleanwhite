@@ -19,6 +19,9 @@ While I created this theme, I followed the Hugo theme best practice and tried to
 **Search**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/search.png)
 
+**Wechat Pay & Alipay**
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/rewards.png)
+
 ## Quick Start
 Go to the directory where you have your Hugo site and run:
 
