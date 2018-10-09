@@ -48,8 +48,8 @@ home = ["HTML", "RSS", "Algolia"]
   disqus_site = ""
 
   #wechat pay & alipay 
-  zanshang = false
-  # zanshang_guide = "如果这篇文章对你有用，请随意打赏" 
+  reward = false
+  # reward_guide = "如果这篇文章对你有用，请随意打赏" 
 
   [params.social]
   rss            = true 
