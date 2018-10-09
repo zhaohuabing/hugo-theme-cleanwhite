@@ -124,8 +124,21 @@ ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
 Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
 
+### Wechat Pay & Alipay Rewards
+
+You can enable Wechat Pay & Alipay to allow readers send you reward money. If they like your articles, you may even make profit from your writing.
+
+* Enable Wechat Pay & Alipay in the site config
+```toml
+reward = true
+```
+* Replace the QR codes of Wechat Pay & Alipay by overriding the photos in folder /static/img/reward/, otherwise the money will be sent to my accounts!
+
+
 ## Thank
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
 
 ## Feedback
 If you find any problems, please feel free to [raise an issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/new) or create a pull request to fix it. 
+
+Star this repository if you think it's helpful, thanks!
