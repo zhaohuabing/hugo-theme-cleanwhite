@@ -1,15 +1,23 @@
 
 <div class="entry-shang text-center">
-	<p>「真诚赞赏，手留余香」</p>
-	<button class="zs show-zs btn btn-bred">赞赏</button>
+    {{ if .Site.Params.zanshang_guide }}
+	    <p> 「{{ .Site.Params.zanshang_guide }}」</p>
+	{{ else }}
+	    <p>「真诚赞赏，手留余香」</p>
+	{{ end }}
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
 </div>
 <div class="zs-modal-bg"></div>
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
 		<span class="author"><a href="{{ .Site.BaseURL }}"><img src="{{ "img/favicon.png" | absURL}}" />{{ .Site.Title }}</a></span>
-		<p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
-
+        {{ if .Site.Params.zanshang_guide }}
+	        <p class="tip"><i></i><span>{{ .Site.Params.zanshang_guide }}</span></p>
+		{{ else }}
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		{{ end }}
+ 
 	</div>
 	<div class="zs-modal-body">
 		<div class="zs-modal-btns">

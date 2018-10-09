@@ -49,6 +49,7 @@ home = ["HTML", "RSS", "Algolia"]
 
   #wechat pay & alipay 
   zanshang = false
+  # zanshang_guide = "如果这篇文章对你有用，请随意打赏" 
 
   [params.social]
   rss            = true 
