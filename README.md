@@ -144,4 +144,4 @@ Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/hu
 ## Feedback
 If you find any problems, please feel free to [raise an issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/new) or create a pull request to fix it. 
 
-I will appreciate your staring this repository if you think it's helpful, thanks!
+If it's helpful for you, I would appreciate it if you could star this repository, thanks!
