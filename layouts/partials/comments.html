@@ -1,7 +1,7 @@
 <!-- disqus 评论框 end -->
 <div id="disqus-comment"></div>
 {{ if .Site.Params.disqus_proxy }}
-<script src="{{ "js/iDisqus.js" | absURL }}"></script>
+<script src="{{ "js/iDisqus.js" | relURL }}"></script>
 <script>
 var disq = new iDisqus('disqus-comment', {
     forum: '{{ .Site.DisqusShortname}}',

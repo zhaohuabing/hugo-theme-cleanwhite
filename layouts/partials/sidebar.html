@@ -30,7 +30,7 @@
         <hr><h5><a href="">ABOUT ME</a></h5>
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-            <img src="{{ . | absURL }}" />
+            <img src="{{ . | relURL }}" />
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
                 <p>{{ . }}</p>
@@ -89,7 +89,7 @@
                {{ end }}
                {{ with .Site.Params.social.wechat }}
                <li>
-                   <a target="_blank" href="{{ . | absURL}}">
+                   <a target="_blank" href="{{ . | relURL}}">
                        <span class="fa-stack fa-lg">
                            <i class="fa fa-circle fa-stack-2x"></i>
                            <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
