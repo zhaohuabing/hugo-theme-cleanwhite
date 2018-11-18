@@ -70,7 +70,7 @@
 		    <!-- Huabing: add wechat QR code link -->
                     {{ with .Site.Params.social.wechat }}
                     <li>
-                        <a target="_blank" href="{{ . | absURL }}">
+                        <a target="_blank" href="{{ . | relURL }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
