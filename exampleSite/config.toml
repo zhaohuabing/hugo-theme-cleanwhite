@@ -37,7 +37,7 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
   sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-  featured_tags = true 
+  featured_tags = true
   featured_condition_size = 2 
 
   # Baidu Analytics
@@ -64,10 +64,14 @@ home = ["HTML", "RSS", "Algolia"]
   wechat         = "link of wechat QR code image"
   #pinterest     = "full profile url in pinterest"
   #medium        = "full profile url in medium"
-  
+
+  friends = true
+
   [[params.friend_link]]
   title = "Linda的博客"
   href =  "https://zhaozhihan.com"
+
+  bookmarks = true
 
   [[params.bookmark_link]]
   title =  "Martin Fowler"
