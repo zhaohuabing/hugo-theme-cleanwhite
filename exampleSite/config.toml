@@ -63,6 +63,7 @@ home = ["HTML", "RSS", "Algolia"]
   github         = "full profile url in github"
   wechat         = "link of wechat QR code image"
   #pinterest     = "full profile url in pinterest"
+  #medium        = "full profile url in medium"
   
   [[params.friend_link]]
   title = "Linda的博客"
