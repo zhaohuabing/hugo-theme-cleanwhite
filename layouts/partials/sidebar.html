@@ -130,21 +130,29 @@
                 </ul>
             </div>
     </section>
-   <!-- Friends Blog -->
-   <hr>
-   <h5>FRIENDS</h5>
-   <ul class="list-inline">
-       {{ range .Site.Params.friend_link }}
-           <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
-       {{ end }}
-   </ul>
-   
+    <!-- Friends Blog -->
+    {{ if .Site.Params.friends }}
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+            {{ range .Site.Params.friend_link }}
+            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
     <!-- Bookmarks -->
-   <hr>
-   <h5>BOOKMARKS</h5>
-   <ul class="list-inline">
-   {{ range .Site.Params.bookmark_link }}
-           <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
-       {{ end }}
-   </ul>
+    {{ if .Site.Params.bookmarks }}
+    <section>
+        <hr>
+        <h5>BOOKMARKS</h5>
+        <ul class="list-inline">
+            {{ range .Site.Params.bookmark_link }}
+            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
 </div>
