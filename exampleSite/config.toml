@@ -66,6 +66,8 @@ home = ["HTML", "RSS", "Algolia"]
   #medium        = "full profile url in medium"
 
   friends = true
+  bookmarks = false 
+  about_me = true
 
   [[params.friend_link]]
   title = "Linda的博客"
