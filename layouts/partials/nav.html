@@ -30,10 +30,15 @@
                     </li>
                     {{ end }}
 
+                    {{ if .Site.Params.about_me }}
+		     <li>
+                        <a href="{{ "top/about/" | relURL }}">ABOUT</a>
+		    </li>
+                    {{ end }}
                     {{ if .Site.Params.algolia_search }}
-		            <li>
+		    <li>
                         <a href="{{ "search" | relURL }}">SEARCH <img src="{{ "img/search.png" | relURL }}" height="15" style="cursor: pointer;"></a>
-		            </li>
+		    </li>
                     {{ end }}
                 </ul>
             </div>
