@@ -1,25 +1,26 @@
 {{ define "header" }}
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
     }
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
-                       {{ range .Params.tags }}
-                       <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
-                           {{ . }}
+                        {{ range .Params.tags }}
+                        <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+                            {{ . }}
                         </a>
                         {{ end }}
                     </div>
                     <h1>{{ .Title }}</h1>
                     <h2 class="subheading">{{ .Params.subtitle }}</h2>
-                    <span  class="meta">Posted by {{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Title }}{{ end }} on {{ .Date.Format "Monday, January 2, 2006" }}
+                    <span class="meta">Posted by {{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Title
+                        }}{{ end }} on {{ .Date.Format "Monday, January 2, 2006" }}
                         {{ if .Site.Params.page_view_conter }}
                         {{ partial "page_view_counter.html" . }}
                         {{ end }}
@@ -43,34 +44,36 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-        		{{ if eq .Params.showtoc false }}
-        		{{ else }}
-                        <header>
-                        <h2>TOC</h2>
-                        </header>
-                        {{.TableOfContents}}
-        		{{ end }}
-        		{{ .Content }}
-        
-                {{ if .Site.Params.reward }}
-                    {{ partial "reward.html" . }}
+                {{ if eq .Params.showtoc false }}
+                {{ else }}
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                {{.TableOfContents}}
                 {{ end }}
-        
-              <hr>
-              <ul class="pager">
-                  {{ if .Prev }}
-                  <li class="previous">
-                      <a href="{{ .Prev.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Prev.Title}}">&larr; Previous Post</a>
-                  </li>
-                  {{ end }}
-                  {{ if .Next }}
-                  <li class="next">
-                      <a href="{{ .Next.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .Next.Title}}">Next Post &rarr;</a>
-                  </li>
-                  {{ end }}
-              </ul>
-  
-              {{ partial "comments.html" . }}
+                {{ .Content }}
+
+                {{ if .Site.Params.reward }}
+                {{ partial "reward.html" . }}
+                {{ end }}
+
+                <hr>
+                <ul class="pager">
+                    {{ if .PrevInSection }}
+                    <li class="previous">
+                        <a href="{{ .PrevInSection.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title}}">&larr;
+                            Previous Post</a>
+                    </li>
+                    {{ end }}
+                    {{ if .NextInSection }}
+                    <li class="next">
+                        <a href="{{ .NextInSection.URL }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title}}">Next
+                            Post &rarr;</a>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                {{ partial "comments.html" . }}
 
             </div>
             <!-- Sidebar Container -->
@@ -89,7 +92,7 @@
                         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
                         {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
                         <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
-                        {{ $name }}
+                            {{ $name }}
                         </a>
                         {{ end }}
                         {{ end }}
@@ -115,5 +118,3 @@
 </article>
 
 {{ end }}
-
-
