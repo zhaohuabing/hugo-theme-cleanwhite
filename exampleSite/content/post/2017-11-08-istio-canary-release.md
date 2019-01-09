@@ -26,7 +26,7 @@ categories: [ "Tech" ]
 “金丝雀发布”的来源于矿工们用金丝雀对矿井进行空气测试的做法。以前矿工挖煤的时候，矿工下矿井前会先把金丝雀放进去，或者挖煤的时候一直带着金丝雀。金丝雀对甲烷和一氧化碳浓度比较敏感，会先报警。所以大家都用“金丝雀”来搞最先的测试。
 
 下图中，左下方的少部分用户就被当作“金丝雀”来用于测试新上线的1.1版本。如果新版本出现问题，“金丝雀”们会报警，但不会影响其他用户业务的正常运行。
-![Istio灰度发布示意图](http://img.zhaohuabing.com/in-post/istio-canary-release/canary-deployment.PNG)
+![Istio灰度发布示意图](https://img.zhaohuabing.com/in-post/istio-canary-release/canary-deployment.PNG)
 
 灰度发布（金丝雀发布）的流程如下：
 
@@ -46,7 +46,7 @@ Istio通过高度的抽象和良好的设计采用一致的方式解决了该问
 备注：采用kubernetes的[滚动升级(rolling update)](https://kubernetes.io/docs/tasks/run-application/rolling-update-replication-controller/)功能也可以实现不中断业务的应用升级,但滚动升级是通过逐渐使用新版本的服务来替换老版本服务的方式对应用进行升级，在滚动升级不能对应用的流量分发进行控制，因此无法采用受控地把生产流量逐渐导流到新版本服务中，也就无法控制服务升级对用户造成的影响。
 
 采用Istio后，可以通过定制路由规则将特定的流量（如指定特征的用户）导入新版本服务中，在生产环境下进行测试，同时通过渐进受控地导入生产流量，可以最小化升级中出现的故障对用户的影响。并且在同时存在新老版本服务时，还可根据应用压力对不同版本的服务进行独立的缩扩容，非常灵活。采用Istio进行灰度发布的流程如下图所示：
-![Istio灰度发布示意图](http://img.zhaohuabing.com/in-post/istio-canary-release/canary-deployments.gif)
+![Istio灰度发布示意图](https://img.zhaohuabing.com/in-post/istio-canary-release/canary-deployments.gif)
 
 ## 操作步骤
 下面采用Istion自带的BookinfoInfo示例程序来试验灰度发布的流程。

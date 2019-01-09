@@ -27,7 +27,7 @@ Istio 0.7版本就利用了Kubernets webhook实现了sidecar的自动注入。
 ## 什么是Admission
 ---
 Admission是Kubernets中的一个术语，指的是Kubernets API Server资源请求过程中的一个阶段。如下图所示，在API Server接收到资源创建请求时，首先会对请求进行认证和鉴权，然后经过Admission处理，最后再保存到etcd。 
-![](http://img.zhaohuabing.com/in-post/2018-4-25-istio-auto-injection-with-webhook/admission-phase.png)
+![](https://img.zhaohuabing.com/in-post/2018-4-25-istio-auto-injection-with-webhook/admission-phase.png)
 从图中看到，Admission中有两个重要的阶段，Mutation和Validation，这两个阶段中执行的逻辑如下：
 * Mutation
   

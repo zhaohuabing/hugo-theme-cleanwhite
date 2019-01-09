@@ -70,7 +70,7 @@ OAuth针对不同场景有不同的认证流程，一个典型的认证流程如
 >```
 
 
-![OAuth认证流程](http://img.zhaohuabing.com/in-post/2018-05-23-external_system_auth/oauth_web_server_flow.png)
+![OAuth认证流程](https://img.zhaohuabing.com/in-post/2018-05-23-external_system_auth/oauth_web_server_flow.png)
 <center>OAuth认证流程</center>
 
 

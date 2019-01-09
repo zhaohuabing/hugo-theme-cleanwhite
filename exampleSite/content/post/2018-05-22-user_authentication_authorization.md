@@ -111,7 +111,7 @@ Authorization: Bearer mF_9.B5f-4.1JqM
 2. 如果请求中没有Token，Token过期或者Token验证非法，则拒绝用户请求。
 3. Security Service检查用户是否具有该操作权(可选，参见下一小节)
 4. 如果用户具有该操作权限，则把请求发送到后端的Business Service，否则拒绝用户请求
-![采用API Gateway实现微服务应用的SSO](http://img.zhaohuabing.com/in-post/2018-05-22-user_authentication_authorization/api-gateway-sso.png)
+![采用API Gateway实现微服务应用的SSO](https://img.zhaohuabing.com/in-post/2018-05-22-user_authentication_authorization/api-gateway-sso.png)
 <center>采用API Gateway和Token实现微服务应用的单点登录</center>
 
 ### 用户权限控制

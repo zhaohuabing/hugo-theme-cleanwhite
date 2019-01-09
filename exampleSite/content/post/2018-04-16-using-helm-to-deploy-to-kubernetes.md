@@ -30,7 +30,7 @@ kubernetes的核心设计理念是: 用户定义应用程序的规格，而kuber
 以下面的wordpress应用程序为例，涉及到多个kubernetes API对象，这些kubernetes API对象分散在多个yaml文件中。
 
 图1： Wordpress应用程序中涉及到的kubernetes API对象
-![](http://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/wordpress.png)
+![](https://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/wordpress.png)
 
 
 可以看到，在进行kubernetes软件部署时，我们面临下述问题：
@@ -81,7 +81,7 @@ Helm的引入很好地解决上面这些问题。
 下面这张图描述了Helm的几个关键组件Helm（客户端），Tiller（服务器），Repository（Chart软件仓库），Chart（软件包）之前的关系。
 
 图2： Helm软件架构
-![](http://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/helm-architecture.png)
+![](https://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/helm-architecture.png)
 
 ## 安装Helm
 - - -
@@ -335,7 +335,7 @@ Helm作为kubernetes应用的包管理以及部署工具，提供了应用打包
 **A**: 采用Helm可以把零散的Kubernetes应用配置文件作为一个chart管理，chart源码可以和源代码一起放到git库中管理。Helm还简了在CI/CD pipeline的软件部署流程。通过把chart参数化，可以在测试环境和生产环境可以采用不同的chart参数配置。
 
 下图是采用了Helm的一个CI/CD流程
-![](http://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/ci-cd-jenkins-helm-k8s.png)
+![](https://img.zhaohuabing.com/in-post/2018-04-16-using-helm-to-deploy-to-kubernetes/ci-cd-jenkins-helm-k8s.png)
 
 **Q**: 感谢分享，请问下多环境(test,staging，production)的业务配置如何管理呢？通过heml打包configmap吗，比如配置文件更新，也要重新打chats包吗？谢谢，这块我比较乱<BR>
 **A**：Chart是支持参数替换的，可以把业务配置相关的参数设置为模板变量。使用Helm install Chart的时候可以指定一个参数值文件，这样就可以把业务参数从Chart中剥离了。例子： helm install --values=myvals.yaml wordpress
