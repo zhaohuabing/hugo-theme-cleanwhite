@@ -26,12 +26,18 @@ While I created this theme, I followed the Hugo theme best practice and tried to
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/rewards.png)
 
 ## Quick Start
-Go to the directory where you have your Hugo site and run:
+
+The simplest way is to start with the example site coming with this theme, then you can play around and add your own stuff.
 
 ```
+$ mkdir test
+$ cd test
 $ mkdir themes
 $ cd themes
 $ git clone https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
+$ cp -r hugo-theme-cleanwhite/exampleSite/** ../
+$ cd ..
+$ hugo serve
 ```
 
 If your site is already a git project, you may want to choose to add the cleanwhite theme as a submodule to avoid messing up your existing git repository.
