@@ -28,7 +28,7 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = false 
+  algolia_search = true 
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""

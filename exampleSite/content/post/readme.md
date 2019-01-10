@@ -20,16 +20,19 @@ While I created this theme, I followed the Hugo theme best practice and tried to
 ## Screenshots
 
 **Home**
-![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/fullscreenshot.png)
+![screenshot](/img/fullscreenshot.png)
 
 **Post**
-![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/post.png)
+![screenshot](/img/post.png)
 
 **Search**
-![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/search.png)
+![screenshot](/img/sitesearch.png)
+
+**Disqus**
+![screenshot](/img/disqus.png)
 
 **Wechat Pay & Alipay**
-![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/rewards.png)
+![screenshot](/img/rewards.png)
 
 ## Quick Start
 Go to the directory where you have your Hugo site and run:
