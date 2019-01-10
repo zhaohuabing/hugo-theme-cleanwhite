@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "https://zhaohuabing.com"
 title = "Huabing Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
@@ -23,71 +23,78 @@ home = ["HTML", "RSS", "Algolia"]
   title_404 = "你来到了没有知识的荒原 :("
 
   # leancloud storage for page view counter
-  page_view_conter = false
+  page_view_conter = false 
   leancloud_app_id = ""
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true 
+  algolia_search = true
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
-  sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/zhaohuabing.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-  featured_tags = true
+  featured_tags = true 
   featured_condition_size = 2 
 
   # Baidu Analytics
   ba_track_id = ""
   
   # We need a proxy to access Disqus api in China
+  # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
   disqus_proxy = ""
   disqus_site = ""
 
-  #wechat pay & alipay 
-  reward = false
-  # reward_guide = "如果这篇文章对你有用，请随意打赏" 
+  #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
+  reward = true 
+  # reward_guide = "如果这篇文章对你有用,请随意打赏" 
+
+  friends = true
+  bookmarks = false
+  about_me = true
 
   [params.social]
   rss            = true 
-  email          = "youemail@gmail.com"
+  email          = "youremail@gmail.com"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
   #twitter       = "full profile url in twitter"
-  linkedin       = "full profile url in linkedin"
-  stackoverflow  = "full profile url in stackoverflow"
+  linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
+  stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
   #instagram     = "full profile url in instagram"
-  github         = "full profile url in github"
-  wechat         = "link of wechat QR code image"
+  github         = "https://github.com/yourgithub"
+  wechat         = "your wechat qr code image"
+#  medium         = "full profile url in medium"
   #pinterest     = "full profile url in pinterest"
-  #medium        = "full profile url in medium"
-
-  friends = true
-  bookmarks = false 
-  about_me = true
-
+  
   [[params.friend_link]]
   title = "Linda的博客"
   href =  "https://zhaozhihan.com"
-
-  bookmarks = true
 
   [[params.bookmark_link]]
   title =  "Martin Fowler"
   href =  "https://martinfowler.com"
   [[params.bookmark_link]]
-  title = "ServiceMesh中文网"
-  href =  "http://www.servicemesh.cn"
+  title = "ServiceMesher"
+  href =  "http://www.servicemesher.com"
   [[params.bookmark_link]]
-  title = "Awesome Service Mesh"
-  href = "https://servicemesh.gitbooks.io/awesome-servicemesh"
+  title =  "Pxhere"
+  href = "https://pxhere.com"
   [[params.bookmark_link]]
-  title =  "Image Compression"
-  href = "https://tinypng.com"
+  title = "unsplash"
+  href = "https://unsplash.com"
   
+  [[params.addtional_menus]]
+  title =  "BOOKS"
+  href =  "/top/books/"
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href =  "/top/about/"
+
 [outputFormats.Algolia]
 baseName = "algolia"
 isPlainText = true
