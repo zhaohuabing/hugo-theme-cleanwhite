@@ -137,7 +137,7 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
@@ -150,7 +150,7 @@
         <h5>BOOKMARKS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.bookmark_link }}
-            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
