@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+            <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,7 +22,7 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">Home</a>
+                        <a href="{{ "/" | relLangURL }}">Home</a>
                     </li>
                     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
                     <li>
@@ -31,7 +31,7 @@
                     {{ end }}
                     
 		    {{ range .Site.Params.addtional_menus }}
-                        <li><a href="{{.href}}">{{.title}}</a></li>
+                        <li><a href="{{.href | relLangURL}}">{{.title}}</a></li>
                     {{ end }}
 
                     {{ if .Site.Params.algolia_search }}
