@@ -31,7 +31,7 @@
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
             <a href="{{ "/top/about" | relLangURL }}">
-               <img src="{{ . | relURL }}" alt="avatar" />
+               <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
             </a>
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
