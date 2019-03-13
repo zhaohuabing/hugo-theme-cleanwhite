@@ -51,8 +51,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                {{ if eq .Params.showtoc false }}
-                {{ else }}
+                {{ if not (eq (.Param "showtoc") false) }}
                 <header>
                     <h2>TOC</h2>
                 </header>
