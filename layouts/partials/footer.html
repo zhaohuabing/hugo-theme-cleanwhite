@@ -180,6 +180,7 @@
 </script>
 
 <!-- push page to Baidu -->
+{{ if .Site.Params.ba_track_id }}
 <script>
     (function(){
         var bp = document.createElement('script');
@@ -197,7 +198,6 @@
 
 
 <!-- Baidu Tongji -->
-{{ if .Site.Params.ba_track_id }}
 <script>
     // dynamic User by Hux
     var _baId = '{{ .Site.Params.ba_track_id }}';
