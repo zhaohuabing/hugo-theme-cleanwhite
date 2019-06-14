@@ -88,6 +88,26 @@
                         </a>
                     </li>
 		    {{ end }}
+                    {{ with .Site.Params.social.gitlab }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
+                    {{ with .Site.Params.social.git }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
                     {{ with .Site.Params.social.linkedin }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -104,6 +124,46 @@
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
+                    {{ with .Site.Params.social.stackoverflow }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
+                    {{ with .Site.Params.social.reddit }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
+                    {{ with .Site.Params.social.mastodon }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+            {{ end }}
+                    {{ with .Site.Params.social.keybase }}
+                    <li>
+                        <a target="_blank" href="{{ . }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-keybase fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
