@@ -57,6 +57,10 @@ home = ["HTML", "RSS", "Algolia"]
   bookmarks = false
   about_me = true
 
+  # Highlight.js theme
+  # demo: https://highlightjs.org/static/demo/
+  highlightjs = "docco"
+
   [params.social]
   rss            = true 
   email          = "youremail@gmail.com"
