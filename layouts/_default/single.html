@@ -20,16 +20,20 @@
                     <h1>{{ .Title }}</h1>
                     <h2 class="subheading">{{ .Params.subtitle }}</h2>
                     <span class="meta">
-			Posted by 
-			{{ if .Params.author }}
-			    {{ .Params.author }}
-			{{ else }}
-		            {{ .Site.Title }}
-			{{ end }} 
-			on 
-			{{ .Date.Format "Monday, January 2, 2006" }}
+                        Posted by 
+                        {{ if .Params.author }}
+                            {{ .Params.author }}
+                        {{ else }}
+                                {{ .Site.Title }}
+                        {{ end }} 
+                        on 
+                        {{ .Date.Format "Monday, January 2, 2006" }}
                         {{ if .Site.Params.page_view_conter }}
                             {{ partial "page_view_counter.html" . }}
+                        {{ end }}
+                        <!-- Don't show "Last Modified on" if update happened on the same day. -->
+                        {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+                        <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
                         {{ end }}
                     </span>
                 </div>
