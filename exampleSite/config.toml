@@ -61,6 +61,10 @@ home = ["HTML", "RSS", "Algolia"]
   #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
+  # Highlight.js theme
+  # demo: https://highlightjs.org/static/demo/
+  highlightjs = "docco"
+
   [params.social]
   rss            = true 
   email          = "youremail@gmail.com"
@@ -74,6 +78,11 @@ home = ["HTML", "RSS", "Algolia"]
   wechat         = "your wechat qr code image"
 #  medium         = "full profile url in medium"
   #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #git           = "full profile url for git user"
   
   [[params.friend_link]]
   title = "Linda的博客"
