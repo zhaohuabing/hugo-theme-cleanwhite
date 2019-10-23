@@ -15,7 +15,7 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
     </div>
     {{ with .Get "link" | default (.Get "src") }}<a href="{{.}}" itemprop="contentUrl"></a>{{ end }}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-      <figcaption>
+      <figcaption align="center">
         {{- with .Get "title" }}<h4>{{.}}</h4>{{ end }}
         {{- if or (.Get "caption") (.Get "attr")}}
           <p>
