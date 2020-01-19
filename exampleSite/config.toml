@@ -83,6 +83,7 @@ home = ["HTML", "RSS", "Algolia"]
   #gitlab        = "full profile url in gitlab"
   #mastodon      = "full profile url in mastodon"
   #keybase       = "full profile url in keybase"
+  #xing          = "https://www.xing.com/profile/yourxingid"
   #git           = "full profile url for git user"
   
   [[params.friend_link]]

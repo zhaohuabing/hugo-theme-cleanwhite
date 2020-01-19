@@ -168,6 +168,16 @@
                         </a>
                     </li>
             {{ end }}
+            {{ with .Site.Params.social.xing }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+    {{ end }}
                 </ul>
 		<p class="copyright text-muted">
                     Copyright &copy; {{ .Site.Title }} {{ now.Year }}
