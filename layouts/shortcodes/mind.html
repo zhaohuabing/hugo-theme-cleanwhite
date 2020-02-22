@@ -1,0 +1,12 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<script src="/js/mindmap.min.js"></script>
+<script src="/js/kity.min.js"></script>
+<script src="/js/kityminder.core.min.js"></script>
+
+<!-- Photoswipe css/js libraries -->
+<link rel="stylesheet" href="/css/mindmap.css" />
+
+
+<div id="{{ .Get 0 }}" class="mindmap mindmap-lg">
+    {{.Inner}}
+</div>
