@@ -62,10 +62,6 @@ home = ["HTML", "RSS", "Algolia"]
   #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
-  # Highlight.js theme
-  # demo: https://highlightjs.org/static/demo/
-  highlightjs = "docco"
-
   [params.social]
   rss            = true 
   email          = "youremail@gmail.com"
@@ -119,3 +115,10 @@ notAlternative = true
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"] 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
