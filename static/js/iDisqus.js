@@ -217,7 +217,7 @@
         _.opts.autoCreate = !!_.opts.autoCreate || !!_.opts.auto;
 
         // emoji 表情
-        _.opts.emojiPath = _.opts.emojiPath || _.opts.emoji_path || 'https://assets-cdn.github.com/images/icons/emoji/unicode/';
+        _.opts.emojiPath = _.opts.emojiPath || _.opts.emoji_path || 'https://cdn.jsdelivr.net/emojione/assets/png/';
         _.emojiList = _.opts.emojiList || _.opts.emoji_list || [{
             code:'smile',
             title:'笑脸',
