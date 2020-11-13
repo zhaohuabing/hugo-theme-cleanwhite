@@ -28,6 +28,9 @@ While I created this theme, I followed the Hugo theme best practice and tried to
 **Mind Map**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/mindmap.png)
 
+**Bilibili Video**
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/bilibili.png)
+
 ## Quick Start
 
 The simplest way is to start with the example site coming with this theme, then you can play around and add your own stuff.
@@ -183,6 +186,20 @@ Mind Map is supported with shortcode 'mind', instering the following code snippe
         - Level 2
 {{% /mind %}}
 ```
+
+### Embedded Videos
+
+Use the below hugo shortcodes to embed videos into your posts.
+
+Bilibili (B站) 
+```
+{{< bilibili BV1kZ4y137gv >}}
+``` 
+
+Youtube
+```
+{{< youtube cllc1ZGlhsQ >}}
+``` 
 
 ## Thanks
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
