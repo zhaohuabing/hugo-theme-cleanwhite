@@ -201,6 +201,9 @@ Youtube
 {{< youtube cllc1ZGlhsQ >}}
 ``` 
 
+Vimeo
+{{< vimeo 146022717 >}}
+
 ## Thanks
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
 
