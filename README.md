@@ -64,7 +64,7 @@ If you start from scratch, there is a working Hugo site configured with the Clea
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo 
 
 ## Configuration
-First, let's take a look at the [config.toml](https://github.com/zhaohuabing/hugo-cleanwhite-theme/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+First, let's take a look at the [config.toml](https://github.com/zhaohuabing/hugo-theme-cleanwhite/blob/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
 ### Comments
 The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
