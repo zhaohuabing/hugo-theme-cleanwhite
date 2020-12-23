@@ -13,13 +13,13 @@
         <hr class="hidden-sm hidden-xs">
         <h5>FEATURED TAGS</h5>
         <div class="tags">
-            {{ $featured_condition_size := .Site.Params.featured_condition_size }} 
+            {{ $featured_condition_size := .Site.Params.featured_condition_size }}
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-               {{ if gt (len $taxonomy.Pages) $featured_condition_size }} 
+               {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
                     <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
                         {{ $name }}
                     </a>
-               {{ end }} 
+               {{ end }}
             {{ end }}
         </div>
     </section>
@@ -39,13 +39,13 @@
                 <p>{{ . }}</p>
             {{ end }}
            <!-- SNS Link -->
-           <ul class="list-inline"> 
+           <ul class="list-inline">
                {{ if .Site.Params.social.rss }}
                <li>
                    <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -54,8 +54,8 @@
                <li>
                    <a href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -64,8 +64,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa  fa-stack-1x fa-inverse">知</i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-stack-1x fa-inverse">知</i>
                        </span>
                    </a>
                </li>
@@ -74,8 +74,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -84,8 +84,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -94,8 +94,8 @@
                <li>
                    <a target="_blank" href="{{ . | relURL}}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-wechat fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -104,8 +104,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -114,8 +114,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -124,8 +124,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-git fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -134,8 +134,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -144,8 +144,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
                             </span>
                    </a>
                </li>
@@ -154,8 +154,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -164,8 +164,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-reddit fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -174,8 +174,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -184,8 +184,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-keybase fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-keybase fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -194,8 +194,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -204,8 +204,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
@@ -214,8 +214,8 @@
                <li>
                    <a target="_blank" href="{{ . }}">
                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-flickr fa-stack-1x fa-inverse"></i>
                        </span>
                    </a>
                </li>
