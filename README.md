@@ -1,6 +1,6 @@
 # Clean White Theme for Hugo
 
-CleanWhite is a clean, elegant, but fully functional blog theme for Hugo. Here is a live [demo site](https://zhaohuabing.com) using this theme.  
+CleanWhite is a clean, elegant, but fully functional blog theme for Hugo. Here is a live [demo site](https://zhaohuabing.com) using this theme.
 
 It is based on [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io)
 and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll).
@@ -61,7 +61,7 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 If you start from scratch, there is a working Hugo site configured with the CleanWhite theme in the [exampleSite](https://github.com/zhaohuabing/hugo-theme-cleanwhite/tree/master/exampleSite) directory.  You can use it as a starting point for your site.
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo 
+For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo
 
 ## Configuration
 First, let's take a look at the [config.toml](https://github.com/zhaohuabing/hugo-theme-cleanwhite/blob/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
@@ -107,7 +107,7 @@ Next, open up the newly created package.json, where we’ll add an NPM script to
 ```josn
 "algolia": "atomic-algolia"
 ```
-Algolia index output format has already been supported by the CleanWhite theme, so you can just build your site, then you’ll find a file called algolia.json in the root, which we can use to update your index in Algolia.
+Algolia index output format has already been supported by the CleanWhite theme, so you can just build your site, then you’ll find a file called algolia.json in your `public` directory, which we can use to update your index in Algolia.
 Generate index file:
 ```bash
 $ hugo
@@ -119,6 +119,8 @@ ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }}
 ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
 ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }}
 ```
+**Make sure double curly braces be replaced together**.
+
 Now you can push your index to Algolia by simply running:
 ```bash
 $ npm run algolia
@@ -134,7 +136,7 @@ Open search page in your browser: http://localhost:1313/search
 
 ### Analytics
 
-You can optionally enable Google or Baidu Analytics. Type your tracking code in the 
+You can optionally enable Google or Baidu Analytics. Type your tracking code in the
 
 ```toml
 googleAnalytics = "UA-XXXXX-X"
@@ -191,15 +193,15 @@ Mind Map is supported with shortcode 'mind', instering the following code snippe
 
 Use the below hugo shortcodes to embed videos into your posts.
 
-Bilibili (B站) 
+Bilibili (B站)
 ```
 {{< bilibili BV1kZ4y137gv >}}
-``` 
+```
 
 Youtube
 ```
 {{< youtube cllc1ZGlhsQ >}}
-``` 
+```
 
 Vimeo
 ```
