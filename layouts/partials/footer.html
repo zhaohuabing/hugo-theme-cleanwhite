@@ -8,8 +8,8 @@
                    <li>
                        <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
                            <span class="fa-stack fa-lg">
-                               <i class="fa fa-circle fa-stack-2x"></i>
-                               <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
                            </span>
                        </a>
                    </li>
@@ -18,19 +18,19 @@
                     <li>
                         <a href="mailto:{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
 		    {{ end }}
-                    
+
                     {{ with .Site.Params.social.twitter }}
                     <li>
                         <a href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -39,8 +39,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab  fa-stack-1x fa-inverse">知</i>
                             </span>
                         </a>
                     </li>
@@ -49,8 +49,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -60,8 +60,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -72,8 +72,8 @@
                     <li>
                         <a target="_blank" href="{{ . | relURL }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-wechat fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -82,8 +82,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -92,8 +92,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -102,8 +102,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-git fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-git fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -112,8 +112,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -122,8 +122,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -132,8 +132,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -142,8 +142,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-reddit fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -152,8 +152,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -162,8 +162,8 @@
                     <li>
                         <a target="_blank" href="{{ . }}">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-keybase fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-keybase fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -172,8 +172,8 @@
             <li>
                 <a target="_blank" href="{{ . }}">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
             </li>
@@ -182,8 +182,8 @@
             <li>
                 <a target="_blank" href="{{ . }}">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
             </li>
@@ -192,15 +192,15 @@
             <li>
                 <a target="_blank" href="{{ . }}">
                     <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-flickr fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
             </li>
     {{ end }}
                 </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; {{ .Site.Title }} {{ now.Year }}
+                    Copyright &copy; {{ .Site.Title }} {{ now.Year }} {{- if .Site.Params.icp }} | {{ with .Site.Params.icp }}{{ . | markdownify }}{{ end }}{{- end}}
                     <br>
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
                     <iframe
@@ -218,7 +218,7 @@
 
 <!-- async load function -->
 <script>
-    function async(u, c) {
+    function loadAsync(u, c) {
       var d = document, t = 'script',
           o = d.createElement(t),
           s = d.getElementsByTagName(t)[0];
@@ -228,18 +228,18 @@
     }
 </script>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
      so Huxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
 -->
 <!--
     <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        loadAsync("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
             hljs.initHighlightingOnLoad();
         })
     </script>
@@ -251,7 +251,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("/js/jquery.tagcloud.js",function(){
+        loadAsync("/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -263,7 +263,7 @@
 
 <!--fastClick.js -->
 <script>
-    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
         var $nav = document.querySelector("nav");
         if($nav) FastClick.attach($nav);
     })
