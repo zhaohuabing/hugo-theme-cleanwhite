@@ -19,10 +19,38 @@
         </div>
     </a>
     <p class="post-meta">
+    {{ if .Params.publication }}
+        {{ with .Params.publication.publisher }}
+            {{ . }}
+        {{ end }}
+        {{ with .Params.publication.online }}
+            <a href="{{ . }}">在线阅读</a>
+        {{ end }}
+        {{ with .Params.publication.jdlink }}
+            <a href="{{ . }}">书籍销售@京东</a>
+        {{ end }}
+        {{ with .Params.publication.ddlink }}
+            <a href="{{ . }}">书籍销售@当当</a>
+        {{ end }}
+    {{ else if .Params.talk }}
+        {{ with .Params.talk.link }}
+            <a href="{{ . }}">活动链接</a>
+        {{ end }}
+        {{ with .Params.talk.slides }}
+            <a href="{{ . }}">讲稿下载</a>
+        {{ end }}
+        {{ with .Params.talk.bilibili }}
+            <a href="{{ . }}">哔哩哔哩</a>
+        {{ end }}
+        {{ with .Params.talk.youtube }}
+            <a href="{{ . }}">YouTube</a>
+        {{ end }}
+     {{ else }}
     Posted by {{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }} {{ .Date.Format "Monday, January 2, 2006" }}
     <!-- Don't show "Last Modified on" if update happened on the same day. -->
     {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
     <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
+    {{ end }}  
     {{ end }}
     </p>
 
