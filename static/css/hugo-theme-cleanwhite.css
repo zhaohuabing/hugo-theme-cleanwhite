@@ -1,3 +1,9 @@
+@media (min-width:1700px){
+    .container {
+        width: 1650px;
+    }
+}
+
 (min-width:1200px){
     .post-container,.sidebar-container{
         padding-right:5%
@@ -883,3 +889,92 @@ body{
 .page-fullscreen footer .copyright a:hover{
     color:#ddd
 }
+
+.catalog-container {
+    padding: 0px;
+  }
+  .side-catalog {
+    display: block;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 40px;
+    width: 195px;
+  }
+  .side-catalog.fixed {
+    position: fixed;
+    top: -21px;
+  }
+  .side-catalog.fold .catalog-toggle::before {
+    content: "+";
+  }
+  .side-catalog.fold .catalog-body {
+    display: none;
+  }
+  .side-catalog .catalog-toggle::before {
+    content: "−";
+    position: relative;
+    margin-right: 5px;
+    bottom: 1px;
+  }
+  .side-catalog .catalog-body {
+    position: relative;
+    list-style: none;
+    height: auto;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 5px;
+    text-indent: 0;
+  }
+  .side-catalog .catalog-body li {
+    position: relative;
+    list-style: none;
+  }
+  .side-catalog .catalog-body li a {
+    padding-left: 10px;
+    max-width: 180px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .side-catalog .catalog-body .h1_nav,
+  .side-catalog .catalog-body .h2_nav {
+    margin-left: 0;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .side-catalog .catalog-body .h3_nav {
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .side-catalog .catalog-body .h4_nav {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+  .side-catalog .catalog-body .h4_nav a {
+    max-width: 170px;
+  }
+  .side-catalog .catalog-body .h5_nav .h6_nav {
+    margin-left: 18px;
+    font-size: 12px;
+  }
+  .side-catalog .catalog-body .h5_nav .h6_nav a {
+    max-width: 170px;
+  }
+  .side-catalog .catalog-body .active {
+    border-radius: 4px;
+    background-color: #f5f5f5;
+  }
+  .side-catalog .catalog-body .active a {
+    color: #0085a1 !important;
+  }
+  @media (max-width: 1200px) {
+    .side-catalog {
+      display: none;
+    }
+  }
