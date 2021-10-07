@@ -11,13 +11,16 @@ While I created this theme, I followed the Hugo theme best practice and tried to
 ## Screenshots
 
 **Home**
-![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/fullscreenshot.png)
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/screenshot.png)
 
 **Post**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/post.png)
 
 **Search**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/sitesearch.png)
+
+**Archive**
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/archive.png)
 
 **Disqus**
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/disqus.png)
