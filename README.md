@@ -218,3 +218,6 @@ Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/hu
 If you find any problems, please feel free to [raise an issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/new) or create a pull request to fix it.
 
 If it's helpful for you, I would appreciate it if you could star this repository, thanks!
+
+## Who is using cleanwhite？(谁在使用 cleanwhite？) 
+Sincerely thank everyone who constantly keeps on using and supporting cleanwhite. Feel free to leave a comment on [this issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/115) to include information about your blog.
