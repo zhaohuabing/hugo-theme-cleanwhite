@@ -9,7 +9,7 @@ published: false
 tags:
     - Jekyll:q 
     - Bitcoin
-categories: [ Note ]
+categories: [ Tech ]
 URL: "/2018/05/21/algolia-integration-with-jekyll"
 
 ---
