@@ -98,6 +98,11 @@ Set the proxy server address in the site config file of your Hugo project.
 ```toml
 disqus_proxy = "http://yourdisqusproxy.com"
 ```
+### Twikoo as comment
+You can also use twikoo as the comment component. Twikoo is a comment system developed by relying on Tencent cloud functions, which you can refer to [twikoo](https://twikoo.js.org/) Deploy on the official website. Just enter the twikoo env_id in the configuration file.
+```
+ twikoo_env_id = "your twikoo env id"
+```
 ### Site Search with Algolia
 Follow this [tutorial](https://forestry.io/blog/search-with-algolia-in-hugo/#3-create-your-index-in-algolia) to create your index in Algolia. The index is just the storage of the indexing data of your site in the the cloud . The search page of CleanWhite theme will utilize this indexing data to do the search.
 
