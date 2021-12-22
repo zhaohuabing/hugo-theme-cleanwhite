@@ -30,4 +30,13 @@ var disq = new iDisqus('disqus-comment', {
 <!-- disqus 评论框 end -->
 <div id="disqus-comment"></div>
 {{ template "_internal/disqus.html" . }}
+{{ else if .Site.Params.twikoo_env_id }}
+<div id="twikoo-tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.14/dist/twikoo.all.min.js"></script>
+<script>
+    twikoo.init({
+        envId: '{{ .Site.Params.twikoo_env_id }}',
+        el: '#twikoo-tcomment',
+    })
+</script>
 {{ end }}

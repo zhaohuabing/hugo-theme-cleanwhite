@@ -50,6 +50,10 @@ home = ["HTML", "RSS", "Algolia"]
   disqus_proxy = ""
   disqus_site = ""
 
+  # Twikoo comments
+  # Follow https://twikoo.js.org/ to set up your own env_id
+  twikoo_env_id = ""
+
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = true 
   # reward_guide = "如果这篇文章对你有用,请随意打赏" 
