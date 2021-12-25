@@ -16,7 +16,7 @@
 }
 .sidebar-container{
     color:#bfbfbf;
-    font-size:14px
+    font-size:15px
 }
 .sidebar-container h5{
     color:gray;
@@ -54,7 +54,7 @@
 body{
     font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
     line-height:1.7;
-    font-size:16px;
+    font-size:17px;
     color:#404040;
     overflow-x:hidden
 }
@@ -148,7 +148,7 @@ pre code{
     margin-top:5px
 }
 .post-container h6{
-    font-size:16px;
+    font-size:17px;
     font-weight:600;
     color:gray
 }
@@ -482,7 +482,7 @@ pre code{
 .post-preview>.post-meta>a, .post-preview>.post-meta{
     font-family:Lora,'Times New Roman',serif;
     color:gray;
-    font-size:16px;
+    font-size:17px;
     font-style:italic;
     margin-top:0
 }
@@ -498,7 +498,7 @@ pre code{
         margin-bottom:10px
     }
     .post-preview>a>.post-subtitle{
-        font-size:16px
+        font-size:17px
     }
     .post-preview .post-meta{
         font-size:18px
@@ -514,7 +514,7 @@ pre code{
 }
 @media only screen and (min-width:768px){
     .post-content-preview{
-        font-size:14px
+        font-size:15px
     }
 }
 .section-heading{
@@ -541,7 +541,7 @@ footer .list-inline{
     padding:0
 }
 footer .copyright{
-    font-size:14px;
+    font-size:15px;
     text-align:center;
     margin-bottom:0
 }
@@ -611,7 +611,7 @@ form .row:first-child .floating-label-form-group{
     padding:15px 25px
 }
 .btn-lg{
-    font-size:16px;
+    font-size:17p'x;
     padding:25px 35px
 }
 .btn-default:hover,.btn-default:focus{
@@ -685,7 +685,7 @@ body{
     padding:0 10px;
     color:#fff;
     line-height:24px;
-    font-size:12px;
+    font-size:14px;
     text-decoration:none;
     margin:0 1px;
     margin-bottom:6px
@@ -761,7 +761,7 @@ body{
     position:relative
 }
 .one-tag-list .post-preview>a .post-title{
-    font-size:16px;
+    font-size:17px;
     font-weight:500;
     margin-top:20px
 }
@@ -788,7 +788,7 @@ body{
         font-size:14px
     }
     .one-tag-list .post-preview .post-meta{
-        font-size:18px
+        font-size:18    px
     }
 }
 .post-container img{
