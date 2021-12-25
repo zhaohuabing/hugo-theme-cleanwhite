@@ -69,16 +69,38 @@ For more information read the official [setup guide](https://gohugo.io/overview/
 ## Configuration
 First, let's take a look at the [config.toml](https://github.com/zhaohuabing/hugo-theme-cleanwhite/blob/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
-### Comments
-The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
+### Comment Systems
+
+The following comment systems have been supported by this theme:
+
+#### Giscus
+
+[Giscus](https://giscus.app/) is a comment system powered by GitHub Discussions.
+
+Install [the Giscus app](https://github.com/marketplace/giscus) on your GitHub repo, and set the parameters as below:
+```
+  [params.giscus]
+  data_repo="your GitHub repo"
+  data_repo_id="your repo id"
+  data_category="your category"
+  data_category_id="your category id"
+  data_mapping="pathname"
+  data_reactions_enabled="1"
+  data_emit_metadata="0"
+  data_theme="light"
+  data_lang="en"
+  crossorigin="anonymous"
+```
+
+#### Disqus
+To enable Disqus, create an account in Disqus and write down your shortname.
 
 ```toml
 disqusShortname = "your-disqus-short-name"
 ```
-You can disable the comments system by leaving the `disqusShortname` empty.
 
-### Disqus in China
-Disqus is inaccessible in China. To get it to work, we can set up a proxy with [disqus-php-api](https://github.com/zhaohuabing/disqus-php-api) in a host which sets between the client browser and the Disqus server. The idea is that if Disqus can be reached in the guest network, the blog page will show the original Disqus comments UI, otherwise, it will downgrade and use the proxy to access the Disqus, the UI will be a little different, but the visitors can still write their comments on the page.
+#### Disqus behind a proxy
+If Disqus can't be directly accessed, we can set up a proxy with [disqus-php-api](https://github.com/zhaohuabing/disqus-php-api) in a host which sets between the client browser and the Disqus server. The idea is that if Disqus can be reached in the guest network, the blog page will show the original Disqus comments UI, otherwise, it will downgrade and use the proxy to access the Disqus, the UI will be a little different, but the visitors can still write their comments on the page.
 
 The client side java script has already been integrated to CleanWhite them, but you need to set up a proxy server yourself.
 
@@ -98,6 +120,16 @@ Set the proxy server address in the site config file of your Hugo project.
 ```toml
 disqus_proxy = "http://yourdisqusproxy.com"
 ```
+#### Twikoo
+Twikoo is a simple, safe, free comment system based on Tencent CloudBase (tcb).
+
+To deploy Twikoo, please refer to the installation guide on [the twikoo website](https://twikoo.js.org/).
+
+Just enter the twikoo env_id in the configuration file to connect your blog to the deployed Twikoo.
+```
+ twikoo_env_id = "your twikoo env id"
+```
+
 ### Site Search with Algolia
 Follow this [tutorial](https://forestry.io/blog/search-with-algolia-in-hugo/#3-create-your-index-in-algolia) to create your index in Algolia. The index is just the storage of the indexing data of your site in the the cloud . The search page of CleanWhite theme will utilize this indexing data to do the search.
 
