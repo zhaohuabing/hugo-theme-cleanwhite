@@ -611,7 +611,7 @@ form .row:first-child .floating-label-form-group{
     padding:15px 25px
 }
 .btn-lg{
-    font-size:17p'x;
+    font-size:17px;
     padding:25px 35px
 }
 .btn-default:hover,.btn-default:focus{
@@ -788,7 +788,7 @@ body{
         font-size:14px
     }
     .one-tag-list .post-preview .post-meta{
-        font-size:18    px
+        font-size:18px
     }
 }
 .post-container img{
