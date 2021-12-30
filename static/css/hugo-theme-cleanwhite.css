@@ -4,13 +4,13 @@
     }
 }
 
-(min-width:1200px){
+@media (min-width:1200px){
     .post-container,.sidebar-container{
         padding-right:5%
     }
 }
 @media (min-width:768px){
-    .post-container{
+    .post-container,.sidebar-container{
         padding-right:5%
     }
 }
