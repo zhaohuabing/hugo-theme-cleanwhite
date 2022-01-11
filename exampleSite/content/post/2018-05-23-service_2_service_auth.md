@@ -8,7 +8,7 @@ showonlyimage: false
 excerpt: "除来自用户的访问请求以外，微服务应用中的各个微服务相互之间还有大量的访问,根据应用系统数据敏感程度不同，对于系统内微服务的访问也需要进行相应的安全控制。"
 author:     "赵化冰"
 date:     2018-05-23T15:00:00
-image: "https://img.zhaohuabing.com/in-post/2018-05-23-service_2_service_auth/background.jpg"
+image: "/img/2018-05-23-service_2_service_auth/background.jpg"
 published: true 
 tags:
     - Microservice
@@ -46,7 +46,7 @@ SPIFFE SVID目前支持的实现方式是X.509数字证书，在x.509 SVID中，
 
 #### Istio Auth开源实现
 Istio服务网格项目的Auth组件实现了SPIFFE标准，可以为网格中服务颁发符合SPIFFE SVID标准的证书，并为服务提供身份认证，细粒度的操作鉴权以及通信加密。Istio的架构如下图所示：
-![](https://img.zhaohuabing.com/in-post/2018-05-23-service_2_service_auth/auth.png)
+![](/img/2018-05-23-service_2_service_auth/auth.png)
 
 Istio Auth采用了Kubernetes的service account来作为服务标识，其SPIFFE ID的格式为spiffe://&lt;domain&gt;/ns/&lt;namespace&gt;/sa/&lt;serviceaccount&gt;，其中各组成部分如下：
 * domain 域名

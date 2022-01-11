@@ -27,7 +27,7 @@ categories: [ Tech ]
 
 Pod(容器组),英文中Pod是豆荚的意思，从名字的含义可以看出，Pod是一组有依赖关系的容器，Pod包含的容器都会运行在同一个host节点上，共享相同的volumes和network namespace空间。Kubernetes以Pod为基本操作单元，可以同时启动多个相同的pod用于failover或者load balance。
 
-![Pod](https://img.zhaohuabing.com/in-post/access-application-from-outside/pod.PNG)
+![Pod](/img/access-application-from-outside/pod.PNG)
 
 Pod的生命周期是短暂的，Kubernetes根据应用的配置，会对Pod进行创建，销毁，根据监控指标进行缩扩容。kubernetes在创建Pod时可以选择集群中的任何一台空闲的Host，因此其网络地址是不固定的。由于Pod的这一特点，一般不建议直接通过Pod的地址去访问应用。
 
@@ -35,7 +35,7 @@ Pod的生命周期是短暂的，Kubernetes根据应用的配置，会对Pod进�
 为了解决访问Pod不方便直接访问的问题，Kubernetes采用了Service的概念，Service是对后端提供服务的一组Pod的抽象，Service会绑定到一个固定的虚拟IP上，该虚拟IP只在Kubernetes Cluster中可见，但其实该IP并不对应一个虚拟或者物理设备，而只是IPtable中的规则，然后再通过IPtable将服务请求路由到后端的Pod中。通过这种方式，可以确保服务消费者可以稳定地访问Pod提供的服务，而不用关心Pod的创建、删除、迁移等变化以及如何用一组Pod来进行负载均衡。
 
 Service的机制如下图所示，Kube-proxy监听kubernetes master增加和删除Service以及Endpoint的消息，对于每一个Service，kube proxy创建相应的iptables规则，将发送到Service Cluster IP的流量转发到Service后端提供服务的Pod的相应端口上。
-![Pod和Service的关系](https://img.zhaohuabing.com/in-post/access-application-from-outside/services-iptables-overview.png)
+![Pod和Service的关系](/img/access-application-from-outside/services-iptables-overview.png)
 
 >备注：虽然可以通过Service的Cluster IP和服务端口访问到后端Pod提供的服务，但该Cluster IP是Ping不通的，原因是Cluster IP只是iptable中的规则，并不对应到一个网络设备。
 
@@ -48,7 +48,7 @@ Service的类型(ServiceType)决定了Service如何对外提供服务，根据�
 
 > 注意：官方文档中说明了Kubernetes clusterIp的流量转发到后端Pod有Iptable和kube proxy两种方式。但对Nodeport如何转发流量却语焉不详。该图来自网络，从图来看是通过kube proxy转发的，我没有去研究过源码。欢迎了解的同学跟帖说明。
 
-![Pod和Service的关系](https://img.zhaohuabing.com/in-post/access-application-from-outside/nodeport.PNG)
+![Pod和Service的关系](/img/access-application-from-outside/nodeport.PNG)
 
 下面是通过NodePort向外暴露服务的一个例子，注意可以指定一个nodePort，也可以不指定。在不指定的情况下，kubernetes会从可用的端口范围内自动分配一个随机端口。
 
@@ -159,7 +159,7 @@ $ neutron lb-member-list
 但是如果客户端不在Openstack Neutron的私有子网上，则还需要在load balancer的VIP上关联一个floating IP，以使外部客户端可以连接到load balancer。
 
 部署Load balancer后，应用的拓扑结构如下图所示（注：本图假设Kubernetes Cluster部署在Openstack私有云上）。
-![外部Load balancer](https://img.zhaohuabing.com/in-post/access-application-from-outside/load-balancer.PNG)
+![外部Load balancer](/img/access-application-from-outside/load-balancer.PNG)
 
 >备注：如果kubernetes环境在Public Cloud上，Loadbalancer类型的Service创建出的外部Load Balancer已经带有公网IP地址，是可以直接从外部网络进行访问的，不需要绑定floating IP这个步骤。例如在AWS上创建的Elastic Load Balancing (ELB)，有兴趣可以看一下这篇文章：[Expose Services on your AWS Quick Start Kubernetes cluster]( http://docs.heptio.com/content/tutorials/aws-qs-services-elb.html)。
 
@@ -167,12 +167,12 @@ $ neutron lb-member-list
 
 
 通过设置Service类型提供的是四层Load Balancer，当只需要向外暴露一个服务的时候，可以直接采用这种方式。但在一个应用需要对外提供多个服务时，采用该方式会为每一个服务（IP+Port）都创建一个外部load balancer。如下图所示
-![创建多个Load balancer暴露应用的多个服务](https://img.zhaohuabing.com/in-post/access-application-from-outside/multiple-load-balancer.PNG)
+![创建多个Load balancer暴露应用的多个服务](/img/access-application-from-outside/multiple-load-balancer.PNG)
 一般来说，同一个应用的多个服务/资源会放在同一个域名下，在这种情况下，创建多个Load balancer是完全没有必要的，反而带来了额外的开销和管理成本。直接将服务暴露给外部用户也会导致了前端和后端的耦合，影响了后端架构的灵活性，如果以后由于业务需求对服务进行调整会直接影响到客户端。可以通过使用Kubernetes Ingress进行L7 load balancing来解决该问题。
 
 ## 采用Ingress作为七层load balancer
 首先看一下引入Ingress后的应用拓扑示意图（注：本图假设Kubernetes Cluster部署在Openstack私有云上）。
-![采用Ingress暴露应用的多个服务](https://img.zhaohuabing.com/in-post/access-application-from-outside/ingress.PNG)
+![采用Ingress暴露应用的多个服务](/img/access-application-from-outside/ingress.PNG)
 这里Ingress起到了七层负载均衡器和Http方向代理的作用，可以根据不同的url把入口流量分发到不同的后端Service。外部客户端只看到foo.bar.com这个服务器，屏蔽了内部多个Service的实现方式。采用这种方式，简化了客户端的访问，并增加了后端实现和部署的灵活性，可以在不影响客户端的情况下对后端的服务部署进行调整。
 
 下面是Kubernetes Ingress配置文件的示例，在虚拟主机foot.bar.com下面定义了两个Path，其中/foo被分发到后端服务s1，/bar被分发到后端服务s2。

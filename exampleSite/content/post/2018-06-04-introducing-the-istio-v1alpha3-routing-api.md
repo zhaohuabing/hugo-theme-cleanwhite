@@ -6,7 +6,7 @@ excerpt: "介绍Istio v1alpha3 routing API及其设计原则"
 description: "介绍Istio v1alpha3 routing API及其设计原则"
 date:       2018-06-04
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-06-04-introducing-the-istio-v1alpha3-routing-api/background.jpg"
+image: "/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/background.jpg"
 published: true 
 tags:
     - Istio 
@@ -36,7 +36,7 @@ URL: "/2018/06/04/introducing-the-istio-v1alpha3-routing-api/"
 
 在一个典型的网格中，通常有一个或多个用于终结外部TLS链接，将流量引入网格的负载均衡器（我们称之为gateway）。 然后流量通过边车网关（sidecar gateway）流经内部服务。 应用程序使用外部服务的情况也很常见（例如访问Google Maps API），一些情况下，这些外部服务可能被直接调用；但在某些部署中，网格中所有访问外部服务的流量可能被要求强制通过专用的出口网关（Egress gateway）。 下图描绘了网关在网格中的使用情况。
 
-![Gateway](https://img.zhaohuabing.com/in-post/2018-06-04-introducing-the-istio-v1alpha3-routing-api/gateways.svg)
+![Gateway](/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/gateways.svg)
 
 考虑到上述因素，`v1alpha3`引入了以下这些新的配置资源来控制进入网格，网格内部和离开网格的流量路由。
 
@@ -48,7 +48,7 @@ URL: "/2018/06/04/introducing-the-istio-v1alpha3-routing-api/"
 `VirtualService`，`DestinationRule`和`ServiceEntry`分别替换了原API中的`RouteRule`，`DestinationPolicy`和`EgressRule`。 `Gateway`是一个独立于平台的抽象，用于对流入专用中间设备的流量进行建模。
 
 下图描述了跨多个配置资源的控制流程。
-![不同配置资源之间的关系](https://img.zhaohuabing.com/in-post/2018-06-04-introducing-the-istio-v1alpha3-routing-api/virtualservices-destrules.svg)
+![不同配置资源之间的关系](/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/virtualservices-destrules.svg)
 
 ### Gateway
 [Gateway](https://istio.io/docs/reference/config/istio.networking.v1alpha3/#Gateway)用于为HTTP / TCP流量配置负载均衡器，并不管该负载均衡器将在哪里运行。 网格中可以存在任意数量的Gateway，并且多个不同的Gateway实现可以共存。 实际上，通过在配置中指定一组工作负载（Pod）标签，可以将Gateway配置绑定到特定的工作负载，从而允许用户通过编写简单的Gateway Controller来重用现成的网络设备。

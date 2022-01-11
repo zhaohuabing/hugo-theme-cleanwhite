@@ -4,7 +4,7 @@ title:      "使用Algolia为Gitpage博客提供站内搜索"
 subtitle:   ""
 date:       2018-05-21 11:00:00
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-05-06-cryptocurrency_week1/bitcoin_header.jpg"
+image: "/img/2018-05-06-cryptocurrency_week1/bitcoin_header.jpg"
 published: false 
 tags:
     - Jekyll:q 
@@ -24,7 +24,7 @@ URL: "/2018/05/21/algolia-integration-with-jekyll"
 
 ## Scrooge Coin Transaction
 Scrooge Coin programming assignment is a little bit tricky, the video of this lesson hasn't explained some implementation details. To help you understand the transaction data structure used in Scrooge Coin, I draw this diagram:
-![Scrooge Coin](https://img.zhaohuabing.com/in-post/2018-5-20-cryptocurrency_week1_scroogecoin/scroogecoin.png)
+![Scrooge Coin](/img/2018-5-20-cryptocurrency_week1_scroogecoin/scroogecoin.png)
 
 <!--more-->
 Every transaction has a set of inputs and a set of outputs. An input in a transaction must use a hash pointer to refer to its corresponding output in the previous transaction, and it must be signed with the private key of the owner because the owner needs to prove he/she agrees to spend his/her coins.  

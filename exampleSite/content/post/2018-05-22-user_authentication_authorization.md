@@ -6,7 +6,7 @@ description: "这段时间对之前微服务安全相关的一些想法进行了
 excerpt: "这段时间对之前微服务安全相关的一些想法进行了进一步总结和归纳，理清在之前文章里面没有想得太清楚的地方，例如服务间的认证与鉴权以及用户身份在服务调用链中的传递。在这一系列博客里面将分为三个部分对微服务安全进行系统阐述：用户访问认证与鉴权，服务间认证与鉴权，外部系统访问控制。"
 date:      2018-05-23T10:00:00
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-05-22-user_authentication_authorization/background.jpg"
+image: "/img/2018-05-22-user_authentication_authorization/background.jpg"
 published: true 
 tags:
     - Microservice
@@ -30,7 +30,7 @@ categories: [ "Tech" ]
 微服务架构的引入为软件应用带来了诸多好处：包括小开发团队，缩短开发周期，语言选择灵活性，增强服务伸缩能力等。与此同时，也引入了分布式系统的诸多复杂问题。其中一个挑战就是如何在微服务架构中实现一个灵活，安全，高效的认证和鉴权方案。
 
 相对于传统单体应用，微服务架构下的认证和鉴权涉及到场景更为复杂，涉及到用户访问微服务应用，第三方应用访问微服务应用，应用内多个微服务之间相互访问等多种场景，每种场景下的认证和鉴权方案都需要考虑到，以保证应用程序的安全性。本系列博文将就此问题进行一次比较完整的探讨。
-![微服务认证和鉴权涉及到的三种场景](/https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/auth-scenarios.png)
+![微服务认证和鉴权涉及到的三种场景](//img/2018-02-03-authentication-and-authorization-of-microservice/auth-scenarios.png)
 <center>微服务认证和鉴权涉及到的三种场景</center>
 
 ## 用户认证和鉴权
@@ -111,7 +111,7 @@ Authorization: Bearer mF_9.B5f-4.1JqM
 2. 如果请求中没有Token，Token过期或者Token验证非法，则拒绝用户请求。
 3. Security Service检查用户是否具有该操作权(可选，参见下一小节)
 4. 如果用户具有该操作权限，则把请求发送到后端的Business Service，否则拒绝用户请求
-![采用API Gateway实现微服务应用的SSO](https://img.zhaohuabing.com/in-post/2018-05-22-user_authentication_authorization/api-gateway-sso.png)
+![采用API Gateway实现微服务应用的SSO](/img/2018-05-22-user_authentication_authorization/api-gateway-sso.png)
 <center>采用API Gateway和Token实现微服务应用的单点登录</center>
 
 ### 用户权限控制

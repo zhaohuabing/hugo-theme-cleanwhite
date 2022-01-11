@@ -6,7 +6,7 @@ description: "一些外部的第三方系统可能需要访问系统内部的微
 excerpt: "一些外部的第三方系统也可能需要访问系统内部的微服务。例如在网上商店的例子中，外部的推荐服务可能需要接入系统，以获取商店的商品目录信息。相对于内部服务之间的访问而言，外部系统的访问需要进行严格的安全控制。"
 date:       2018-05-23T18:00:00
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-05-23-external_system_auth/background.jpg"
+image: "/img/2018-05-23-external_system_auth/background.jpg"
 published: true 
 tags:
     - Microservice
@@ -70,7 +70,7 @@ OAuth针对不同场景有不同的认证流程，一个典型的认证流程如
 >```
 
 
-![OAuth认证流程](https://img.zhaohuabing.com/in-post/2018-05-23-external_system_auth/oauth_web_server_flow.png)
+![OAuth认证流程](/img/2018-05-23-external_system_auth/oauth_web_server_flow.png)
 <center>OAuth认证流程</center>
 
 

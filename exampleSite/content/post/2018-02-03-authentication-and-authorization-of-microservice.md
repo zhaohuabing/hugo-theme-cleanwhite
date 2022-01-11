@@ -6,7 +6,7 @@ description: "微服务架构的引入为软件应用带来了诸多好处：包
 excerpt: "微服务架构的引入为软件应用带来了诸多好处：包括小开发团队，缩短开发周期，语言选择灵活性，增强服务伸缩能力等。与此同时，也引入了分布式系统的诸多复杂问题。其中一个挑战就是如何在微服务架构中实现一个灵活，安全，高效的认证和鉴权方案。本文将尝试就此问题进行一次比较完整的探讨。"
 date:       2018-02-03 12:00:00
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/AuthenticationTrack.jpeg"
+image: "/img/2018-02-03-authentication-and-authorization-of-microservice/AuthenticationTrack.jpeg"
 published: true
 tags:
     - Microservice
@@ -25,11 +25,11 @@ categories: [ Tech ]
 用户登录时，应用的安全模块对用户身份进行验证，验证用户身份合法后，为该用户生成一个会话(Session)，并为该Session关联一个唯一的编号(Session Id)。Session是应用中的一小块内存结构，其中保存了登录用户的信息，如User name, Role, Permission等。服务器把该Session的Session Id返回给客户端，客户端将Session Id以cookie或者URL重写的方式记录下来，并在后续请求中发送给应用，这样应用在接收到客户端访问请求时可以使用Session Id验证用户身份，不用每次请求时都输入用户名和密码进行身份验证。
 > 备注：为了避免Session Id被第三者截取和盗用，客户端和应用之前应使用TLS加密通信，session也会设置有过期时间。
 
-![单体应用用户登录认证序列图](https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/monolith-user-login.png)
+![单体应用用户登录认证序列图](/img/2018-02-03-authentication-and-authorization-of-microservice/monolith-user-login.png)
 <center>单体应用用户登录认证序列图</center>
 
 客户端访问应用时，Session Id随着HTTP请求发送到应用，客户端请求一般会通过一个拦截器处理所有收到的客户端请求。拦截器首先判断Session Id是否存在，如果该Session Id存在，就知道该用户已经登录。然后再通过查询用户权限判断用户能否执行该此请求，以实现操作鉴权。
-![单体应用用户操作鉴权序列图](https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/monolith-user-request.png)
+![单体应用用户操作鉴权序列图](/img/2018-02-03-authentication-and-authorization-of-microservice/monolith-user-request.png)
 <center>单体应用用户操作鉴权序列图</center>
 
 ## 微服务认证和鉴权面临的问题
@@ -38,7 +38,7 @@ categories: [ Tech ]
 * 微服务应遵循单一职责原理，一个微服务只处理单一的业务逻辑。认证和鉴权的公共逻辑不应该放到微服务实现中。 
 * 为了充分利用微服务架构的好处，实现微服务的水平扩展(Scalability)和弹性(Resiliency),微服务最好是无状态的。因此不建议使用session这种有状态的方案。
 * 微服务架构下的认证和鉴权涉及到场景更为复杂，涉及到用户访问微服务应用，第三方应用访问微服务应用，应用内多个微服务之间相互访问等多种场景，每种场景下的认证和鉴权方案都需要考虑到，以保证应用程序的安全性。
-![微服务认证和鉴权涉及到的三种场景](https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/auth-scenarios.png)
+![微服务认证和鉴权涉及到的三种场景](/img/2018-02-03-authentication-and-authorization-of-microservice/auth-scenarios.png)
 <center>微服务认证和鉴权涉及到的三种场景</center>
 
 ## 微服务认证和鉴权的技术方案
@@ -114,7 +114,7 @@ Authorization: Bearer mF_9.B5f-4.1JqM
 2. 如果请求中没有Token，Token过期或者Token验证非法，则拒绝用户请求。
 3. Security Service检查用户是否具有该操作权
 4. 如果用户具有该操作权限，则把请求发送到后端的Business Service，否则拒绝用户请求
-![采用API Gateway实现微服务应用的SSO](https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/api-gateway-sso.png)
+![采用API Gateway实现微服务应用的SSO](/img/2018-02-03-authentication-and-authorization-of-microservice/api-gateway-sso.png)
 <center>采用API Gateway和Token实现微服务应用的单点登录</center>
 
 ### 用户权限控制
@@ -171,7 +171,7 @@ OAuth针对不同场景有不同的认证流程，一个典型的认证流程如
 >```
 
 
-![OAuth认证流程](https://img.zhaohuabing.com/in-post/2018-02-03-authentication-and-authorization-of-microservice/oauth_web_server_flow.png)
+![OAuth认证流程](/img/2018-02-03-authentication-and-authorization-of-microservice/oauth_web_server_flow.png)
 <center>OAuth认证流程</center>
 
 

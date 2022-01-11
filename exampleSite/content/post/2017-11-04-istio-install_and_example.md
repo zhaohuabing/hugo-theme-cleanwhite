@@ -6,7 +6,7 @@ description: "Istio是来自Google，IBM和Lyft的一个Service Mesh（服务网
 excerpt: "Istio是来自Google，IBM和Lyft的一个Service Mesh（服务网格）开源项目，是Google继Kubernetes之后的又一大作,本文将演示如何从裸机开始从零搭建Istio及Bookinfo示例程序。"
 date:    2017-11-04T12:00:00
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/istio-install_and_example/post-bg.jpg"
+image: "/img/istio-install_and_example/post-bg.jpg"
 tags:
     - Istio
 URL: "/2017/11/04/istio-install_and_example/"
@@ -21,13 +21,13 @@ categories: [ Tech ]
 
 <!--more-->
 让我们来回顾一下微服务架构的发展过程。在出现服务网格之前，我们在微服务应用程序进程内处理服务通讯逻辑，包括服务发现，熔断，重试，超时等逻辑，如下图所示：  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/5-a.png)  
+![](/img/istio-install_and_example/5-a.png)  
 通过对这部分负责服务通讯的逻辑进行抽象和归纳，可以形成一个代码库供应用程序调用。但应用程序还是需要处理和各种语言代码库的调用细节，并且各种代码库互不兼容，导致对应用程序使用的语言和代码框架有较大限制。
 
 如果我们更进一步，将这部分逻辑从应用程序进程中抽取出来，作为一个单独的进程进行部署，并将其作为服务间的通信代理，如下图所示：  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/6-a.png)  
+![](/img/istio-install_and_example/6-a.png)  
 因为通讯代理进程和应用进程一起部署，因此形象地把这种部署方式称为“sidecar”（三轮摩托的挎斗）。
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/sidecar.jpg)
+![](/img/istio-install_and_example/sidecar.jpg)
 应用间的所有流量都需要经过代理，由于代理以sidecar方式和应用部署在同一台主机上，应用和代理之间的通讯被认为是可靠的。然后由代理来负责找到目的服务并负责通讯的可靠性和安全等问题。
 
 当服务大量部署时，随着服务部署的sidecar代理之间的连接形成了一个如下图所示的网格，被称之为Service Mesh（服务网格），从而得出如下的服务网格定义。
@@ -36,10 +36,10 @@ _服务网格是一个基础设施层，用于处理服务间通信。云原生�
 
 _William Morgan _[_WHAT’S A SERVICE MESH? AND WHY DO I NEED ONE?_](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/)_                                               _
 
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/mesh1.png)
+![](/img/istio-install_and_example/mesh1.png)
 
 了解了服务网格的基本概念，下一步介绍一下[Istio](https://istio.io/)。Istio是来自Google，IBM和Lyft的一个Service Mesh（服务网格）开源项目，是Google继Kubernetes之后的又一大作，Istio架构先进，设计合理，刚一宣布就获得了Linkerd，nginmesh等其他Service Mesh项目的合作以及Red hat/Pivotal/Weaveworks/Tigera/Datawire等的积极响应。  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Istio-Architecture.PNG)  
+![](/img/istio-install_and_example/Istio-Architecture.PNG)  
 可以设想，在不久的将来，微服务的标准基础设施将是采用kubernetes进行服务部署和集群管理，采用Istio处理服务通讯和治理，两者相辅相成，缺一不可。
 
 ## 安装Kubernetes
@@ -50,7 +50,7 @@ Istio在架构设计上支持各种服务部署平台，包括kubernetes，cloud
 
 从Istio控制面Pilot的架构图可以看到各种部署平台可以通过插件方式集成到Istio中，为Istio提供服务注册和发现功能。
 
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/PilotAdapters.PNG)
+![](/img/istio-install_and_example/PilotAdapters.PNG)
 
 kubernetes集群的部署较为复杂，[Rancher](http://rancher.com)提供了kubernetes部署模板，通过一键式安装，可以大大简化kubernetes集群的安装部署过程。
 
@@ -80,11 +80,11 @@ sudo docker run -d --restart=always -p 8080:8080 rancher/server
 
 ### 登录Rancher管理界面，创建k8s集群
 
-Rancher 管理界面的缺省端口为8080，在浏览器中打开该界面，通过菜单Default-&gt;Manage Environment-&gt;Add Environment添加一个kubernetes集群。这里需要输入名称kubernetes，描述，然后选择kubernetes template，点击create，创建Kubernetes环境。![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Rancher.PNG)
+Rancher 管理界面的缺省端口为8080，在浏览器中打开该界面，通过菜单Default-&gt;Manage Environment-&gt;Add Environment添加一个kubernetes集群。这里需要输入名称kubernetes，描述，然后选择kubernetes template，点击create，创建Kubernetes环境。![](/img/istio-install_and_example/Rancher.PNG)
 
 点击菜单切换到kubernetes Environment，然后点击右上方的Add a host，添加一台host到kubernetes集群中。注意添加到集群中的host上必须先安装好符合要求的docker版本。
 
-然后根据Rancher页面上的提示在host上执行脚本启动Rancher agent，以将host加入ranch cluster。注意脚本中包含了rancher server的地址，在host上必须可以ping通该地址。![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Rancher-add-host.PNG)
+然后根据Rancher页面上的提示在host上执行脚本启动Rancher agent，以将host加入ranch cluster。注意脚本中包含了rancher server的地址，在host上必须可以ping通该地址。![](/img/istio-install_and_example/Rancher-add-host.PNG)
 
 host加入cluster后Rancher会在host上pull kubernetes的images并启动kubernetes相关服务，根据安装环境所在网络情况不同需要等待几分钟到几十分钟不等。
 
@@ -100,7 +100,7 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-登录Rancher管理界面, 将 All Environments-&gt;kubernetes-&gt;KUBERNETES-&gt;CLI create config 的内容拷贝到~/.kube/config 中，以配置Kubectl和kubernetes server的连接信息。![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Rancher-kubectl.PNG)
+登录Rancher管理界面, 将 All Environments-&gt;kubernetes-&gt;KUBERNETES-&gt;CLI create config 的内容拷贝到~/.kube/config 中，以配置Kubectl和kubernetes server的连接信息。![](/img/istio-install_and_example/Rancher-kubectl.PNG)
 
 ## 安装Istio
 
@@ -184,7 +184,7 @@ reviews       10.43.219.248   <none>        9080/TCP   6m
 在浏览器中打开应用程序页面，地址为istio-ingress的External IP
 
 `http://10.12.25.116/productpage`  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Bookinfo.PNG)
+![](/img/istio-install_and_example/Bookinfo.PNG)
 
 ## 理解Istio Proxy实现原理
 
@@ -321,7 +321,7 @@ Chain ISTIO_REDIRECT (3 references)
 多次刷新Bookinfo应用的productpage页面，我们会发现该页面中显示的Book Reviews有时候有带红星的评价信息，有时有带黑星的评价信息，有时只有文字评价信息。  
 这是因为Bookinfo应用程序部署了3个版本的Reviews服务，每个版本的返回结果不同，在没有设置路由规则时，缺省的路由会将请求随机路由到每个版本的服务上，如下图所示：
 
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/withistio.svg)
+![](/img/istio-install_and_example/withistio.svg)
 
 通过创建一条路由规则route-rule.yaml，将请求流量都引导到Reviews-v1服务上
 
@@ -346,7 +346,7 @@ istioctl create -f route-rule.yaml -n default
 ```
 
 再次打开productpage页面, 无论刷新多少次，显示的页面将始终是v1版本的输出，即不带星的评价内容。  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/Bookinfo-no-star.PNG)  
+![](/img/istio-install_and_example/Bookinfo-no-star.PNG)  
 删除该路由规则
 
 ```
@@ -383,7 +383,7 @@ kubectl apply -f istio-0.2.10/install/kubernetes/addons/zipkin.yaml
 
 在浏览器中打开zipkin页面，可以追踪一个端到端调用经过了哪些服务，以及各个服务花费的时间等详细信息，如下图所示：  
 `http://10.12.25.116:30001`  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/zipkin.PNG)
+![](/img/istio-install_and_example/zipkin.PNG)
 
 ## 性能指标监控
 
@@ -417,7 +417,7 @@ kubectl apply -f istio-0.2.10/install/kubernetes/addons/grafana.yaml
 首先在浏览器中打开Bookinfo的页面`http://10.12.25.116/productpage`，刷新几次，以制造一些性能指标数据。
 
 然后打开grafana页面查看性能指标`http://10.12.25.116:30002/dashboard/db/istio-dashboard`，如下图所示：  
-![](https://img.zhaohuabing.com/in-post/istio-install_and_example/grafana.PNG)
+![](/img/istio-install_and_example/grafana.PNG)
 
 ## 参考
 

@@ -4,7 +4,7 @@ title:      "川西秘境探险"
 subtitle:   "2018五一甘堡藏寨，九龙湖自驾游记"
 date:       2018-05-01
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/snowmountain.jpg"
+image: "/img/2018-05-01-may-day-jiulonghu/snowmountain.jpg"
 published: true
 hide-in-home: true
 tags:
@@ -26,7 +26,7 @@ URL: "/2018/05/01/may-day-jiulonghu"
 “浮云牧场”走的是网红路线，马蜂窝，微信公众号的宣传做得好，知名度较高，房间比较紧俏，在五一期间更是一房难求，而且价格也比较感人。两位领导都持家有方，指示我们上去看看风景，然后下山再找住宿。
 
 过了桃坪羌寨大概几公里，317国道右边有一个比较明显的指路牌，往右上山，就是到浮云牧场的路。我们兴冲冲地开车上了山，此时，我们心中向往的浮云牧场是这样子的（取图自网络）：
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/fuyunmuchang.jpeg)
+![](/img/2018-05-01-may-day-jiulonghu/fuyunmuchang.jpeg)
 上山的路况还可以，但比较窄，回头弯较多，需要注意对方来车。开了将近1小时后，来到了半山腰，对面来了好几辆下山的车。由于两方相遇的路面较窄，开始堵车了。这时乘机向对方打听了山上的情况，得知酒店封路了，只有预定了房间的人才能进入浮云牧场。
 
 得知这个消息，此时我们的内心是崩溃的，已经开了一大半的山路，现在却得知不能进去。没有办法，大家商量后还是决定下山。不过“塞翁失马，焉知非福”，这次没进入浮云牧场，为第二天探秘一个新景点埋下伏笔，现在暂时不表。于是我和朋友调转车头，悻悻下山，败意而回。
@@ -40,16 +40,16 @@ URL: "/2018/05/01/may-day-jiulonghu"
 这是一个河边的小院，有三层楼，院子里面种满了各种植物和花卉，老板是个很和气的中年人，把小院收拾得很舒服。房间里挺宽敞，床上套着雪白的床单，非常干净整洁。
 
 院子里的洋槐树树冠上开满了白色的小花，配着嫩绿的树叶和攀缘的蔷薇，感觉非常的清新和惬意。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/nongjiale1.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/nongjiale1.jpg)
 
 老板的三层小楼，这里的修房的材料不是砖头，而是就地取材用山上的片状岩石修砌而成的，很有特色。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/nongjiale3.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/nongjiale3.jpg)
 
 窗户旁边挂着金黄色的玉米。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/nongjiale.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/nongjiale.jpg)
 
 院子里种的玫瑰花。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/rose.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/rose.jpg)
 
 我们和老板闲聊，提到今天没得进到浮云牧场，老板笑道：这浮云牧场的景色我们这里到处都有，只是浮云牧场有老板投资，宣传做得好罢了。这后面山上就有草场，还有一个九龙湖，就挺好耍。我们听了，赶紧向老板仔细打听线路和路况，跃跃欲试，打算明天去探寻这个尚未开发的野景点。
 
@@ -60,69 +60,69 @@ URL: "/2018/05/01/may-day-jiulonghu"
 
 ## 甘堡藏寨风情
 昨晚虽然睡得不是很熟，但藏家院子里空气清新，精神恢复得很快，我没到七点就醒了。起床和大家一起吃了早饭，早饭是烤馍，鸡蛋，咸菜和稀饭。吃完饭后，陪孩子们去寨子里逛了一下。寨子不大，半个小时就能走完，街上摆着一些小摊，售卖一些民族特色的小饰品。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/village2.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/village2.jpg)
 
 两个小朋友在小摊上找自己喜欢的小饰品，摊主是一个十八九岁的小姑娘，她平时在成都读书，放假回来摆个小摊勤工俭学。最后照顾她生意，给每个小朋友买了一个十多块钱的小玩意。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/village3.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/village3.jpg)
 
 寨子墙上的石板画，画的是藏族传说中的英雄人物格萨尔王。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/geshaerwang.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/geshaerwang.jpg)
 ## 探秘九龙湖
 我逛完寨子，其余人也收拾妥当了。向老板告辞后，我们准备向九龙湖进发。细心的老板怕我们找不到地方，特意给我们画了一张地图。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/map.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/map.jpg)
 
 开车顺着河边一路上山，很快就上了盘山公路。路面是水泥的，有护栏，只是路比较窄，很对地方只能容一车通过。川西山区的路基本都是这样之字形的，回头弯很多，这种回头弯一般有30到40度的坡度。我家的小狮子是1.6的，如果速度开慢点的话，过弯时得用一档。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/road1.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/road1.jpg)
 
 山路两边的风景很美，低海拔地区有很多樱桃树，核桃树以及开满了花的洋槐树。洋槐花蜜过一段时间就会上市了，很香的。我们摘了一些花带回家，杨槐花焯水后可以炒蛋，也可以和在面里面吃。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/yanghuaihua.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/yanghuaihua.jpg)
 
 树上结满了樱桃，别看樱桃树不高，一棵树可以产两百斤樱桃。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/cherry.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/cherry.jpg)
 
 再往上开，到了海拔高一点的地方，乔木就比较少了，路两边多是低矮的绿色灌木，以及不知名的小花。五月间的植物都是嫩绿嫩绿的，煞是好看。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/flower.jpg)
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/flower1.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/flower.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/flower1.jpg)
 
 看到几头牛在路边吃草，看这淡定的眼神！山路边还时不时冒出一群小黑猪，目测就是一只就十多斤重，想给它们拍张照片，飞快地钻进灌木丛里面了，只好作罢。川西山里和草原上这种猪都是这样像牛羊一样放养的。我们流着口水说这个是资格的跑山猪，味道肯定巴适！
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/cattle.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/cattle.jpg)
 
 半山上的几户藏家。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/village1.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/village1.jpg)
 
 开到最高的一个寨子后，后面的路就是土路了。向寨子里一个大姐打听了一下，大姐信誓旦旦地说这两天没下大雨，轿车开上去没问题，于是我们就继续往上开了。
 
 上土路后不久，遇到一个搭车的老爷子，他要去山顶的寺庙烧香。我们的运气也挺好，要不是老人家陪我们一起，后面我们不一定找得到地方。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/oldman.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/oldman.jpg)
 
 开了一段土路后，发现路比较窄，路边就是悬崖，而且没有护栏。老婆娃儿都说还是停下来走路上去算了。于是和朋友找了一个路口把车停到路边，开始走路上山。朋友停车后说，在前面几个转弯的地方，开车时脚趾拇都抓紧了。
 
 最后一段就是这种路，地面硬化程度不错，没有下雨的情况下，胆子大点的老师傅可以开上山。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/road.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/road.jpg)
 
 老爷子说这个路开车完全没得问题嘛，他看到别人都开车上去的。我们是不敢继续往前开了，他也只好下车和我们一起走。我一边走一边和老人家聊天，得知他已经高寿76了，完全看不出来，腰板硬朗，牙齿健全，走路比我们年轻人还快。老人家自豪地说他寨子阳光好，地肥沃，种什么粮食产量都高。
 
 老人家所在的寨子，地里面已经种上了玉米。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/village.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/village.jpg)
 
 我继续和老爷子边走边聊，老爷子告诉我，走山路要不紧不慢，快了容易呼吸不畅，引起高原反应。还给我介绍路边的各种植物，哪种可以食用。从聊天中得知，大爷姓何，祖上是从陕西迁移到这里的，到他这里已经是第九代了。家里有四个女儿，都在理县做生意或者打工，寨子的家里就他和老伴。他说他喜欢住在山里，一年也出不了几次山。
 看得出老爷子很高兴有人能陪他说说话，住在山里虽然空气好，但子女不在身边，老人平时估计也比较寂寞。
 
 老爷子说这种野菜煮汤喝很香。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/yecai.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/yecai.jpg)
 
 转过一个弯，听见路边的灌木丛中“噗噗”的声音，飞出一只长尾巴的大鸟来，老爷子说那是野鸡。太快了没能拍到照片。
 
 就这么慢慢地走了将近1小时，来到了山顶上。
 
 令人惊奇的是，虽然上山的路很陡，但山顶上却非常开阔，有一大片草坝子。从山顶上可以隐约看到对面巍峨的雪山，今天天气不是很好，能见度不高，如果是在晴天的话，肯定非常壮观。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/snowmountain.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/snowmountain.jpg)
 
 山顶搭建了一个台子和一个草房。大爷说这是举行节日的时候的临时厨房。每年有三个时间山顶的草坝上会举行锅庄舞会。这个木板上标注了山顶上望过去的几座雪山，可以看到最高的大黄峰有将近6000米高。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/snowmountain1.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/snowmountain1.jpg)
 
 山顶还有一个小秋千，两个小孩在上面玩得不亦乐乎。
-![](https://img.zhaohuabing.com/in-post/2018-05-01-may-day-jiulonghu/swing.jpg)
+![](/img/2018-05-01-may-day-jiulonghu/swing.jpg)
 
 我对比了网上浮云牧场的图片，感觉这个山顶的雪山比浮云牧场更雄伟。这座山的风景也更好，树木，灌木，草地层次分明；而浮云牧场上山的路上很多地方是光秃秃的。
 

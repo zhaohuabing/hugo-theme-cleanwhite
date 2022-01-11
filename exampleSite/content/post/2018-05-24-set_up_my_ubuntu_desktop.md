@@ -5,7 +5,7 @@ description: "Everything about setting up my own ubuntu desktop, it's just a Not
 excerpt: "Everything about setting up my own ubuntu desktop, it's just a Note in case I need it later"
 date:    2018-05-24
 author:     "赵化冰"
-image: "https://img.zhaohuabing.com/in-post/2018-05-23-service_2_service_auth/background.jpg"
+image: "/img/2018-05-23-service_2_service_auth/background.jpg"
 published: true 
 tags:
     - ubuntu 
