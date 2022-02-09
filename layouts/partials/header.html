@@ -18,8 +18,8 @@
       <ul id="menu-primary-items" class="menu-primary-items">
         {{ $page := . }}
         {{ range .Site.Menus.main }}
-        <li id="menu-item" class='menu-item {{ if eq ("/") (.URL) }}menu-item-type-custom menu-item-object-custom{{ else }}menu-item-type-post_type menu-item-object-page{{ end }} {{ if $page.IsMenuCurrent "main" . }}current-menu-item current_page_item{{ end }}'>
-          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        <li id="menu-item" class='menu-item {{ if eq ("/") (.RelPermalink) }}menu-item-type-custom menu-item-object-custom{{ else }}menu-item-type-post_type menu-item-object-page{{ end }} {{ if $page.IsMenuCurrent "main" . }}current-menu-item current_page_item{{ end }}'>
+          <a href="{{ .RelPermalink }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>
