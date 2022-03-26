@@ -3,17 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                   {{ if .Site.Params.social.rss }}
-                   <li>
-                       <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
-                           <span class="fa-stack fa-lg">
-                               <i class="fas fa-circle fa-stack-2x"></i>
-                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                           </span>
-                       </a>
-                   </li>
-                   {{ end }}
+                <ul class="list-inline text-center">                  
                     {{ with .Site.Params.social.email }}
                     <li>
                         <a href="mailto:{{ . }}">
@@ -23,8 +13,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
-
+		           {{ end }}
                     {{ with .Site.Params.social.twitter }}
                     <li>
                         <a href="{{ . }}">
@@ -44,7 +33,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
+		            {{ end }}
                     {{ with .Site.Params.social.weibo }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -54,8 +43,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
-
+		           {{ end }}
                     {{ with .Site.Params.social.facebook }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -65,9 +53,9 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
+		           {{ end }}
 
-		    <!-- Huabing: add wechat QR code link -->
+		            <!-- Huabing: add wechat QR code link -->
                     {{ with .Site.Params.social.wechat }}
                     <li>
                         <a target="_blank" href="{{ . | relURL }}">
@@ -77,7 +65,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
+		            {{ end }}
                     {{ with .Site.Params.social.github }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -87,7 +75,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
+		            {{ end }}
                     {{ with .Site.Params.social.gitlab }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -97,7 +85,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.git }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -107,7 +95,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.linkedin }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -117,7 +105,7 @@
                             </span>
                         </a>
                     </li>
-		    {{ end }}
+		           {{ end }}
                     {{ with .Site.Params.social.medium }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -127,7 +115,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.stackoverflow }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -137,7 +125,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.reddit }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -147,7 +135,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.slack }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -157,7 +145,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.mastodon }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -167,7 +155,7 @@
                             </span>
                         </a>
                     </li>
-            {{ end }}
+                    {{ end }}
                     {{ with .Site.Params.social.keybase }}
                     <li>
                         <a target="_blank" href="{{ . }}">
@@ -207,8 +195,18 @@
                     </span>
                 </a>
             </li>
-    {{ end }}
-                </ul>
+           {{ end }}
+           {{ if .Site.Params.social.rss }}
+                   <li>
+                       <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            {{ end }}
+             </ul>
 		<p class="copyright text-muted">
                     Copyright &copy; {{ .Site.Title }} {{ now.Year }} {{- if .Site.Params.icp }} | {{ with .Site.Params.icp }}{{ . | markdownify }}{{ end }}{{- end}}
                     <br>

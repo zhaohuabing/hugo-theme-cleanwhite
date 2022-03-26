@@ -7,28 +7,10 @@
     col-xs-12
     sidebar-container
 ">
-    <!-- Featured Tags -->
-    {{ if .Site.Params.featured_tags }}
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            {{ $featured_condition_size := .Site.Params.featured_condition_size }}
-            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-               {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
-                        {{ $name }}
-                    </a>
-               {{ end }}
-            {{ end }}
-        </div>
-    </section>
-    {{ end }}
-
     <!-- Short About -->
 	{{ if .Site.Params.about_me }}
     <section class="visible-md visible-lg">
-	<hr><h5><a href="{{ "/top/about" | relLangURL }}">ABOUT ME</a></h5>
+	<!--<hr><h5><a href="{{ "/top/about" | relLangURL }}">ABOUT ME</a></h5>-->
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
             <a href="{{ "/top/about" | relLangURL }}">
@@ -40,13 +22,13 @@
             {{ end }}
            <!-- SNS Link -->
            <ul class="list-inline">
-               {{ if .Site.Params.social.rss }}
+               {{ if .Site.Params.social.email }}
                <li>
-                   <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" >
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                       </span>
+                   <a href="mailto:{{ .Site.Params.social.email }}">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                      </span>
                    </a>
                </li>
                {{ end }}
@@ -224,6 +206,36 @@
             </div>
     </section>
 	{{ end }}
+    <!-- Bookmarks -->
+    {{ if .Site.Params.bookmarks }}
+    <section>
+        <hr>
+        <h5>QUICK LINKS</h5>
+        <ul class="list-inline">
+            {{ range .Site.Params.bookmark_link }}
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+    <!-- Featured Tags -->
+    {{ if .Site.Params.featured_tags }}
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>FEATURED TAGS</h5>
+        <div class="tags">
+            {{ $featured_condition_size := .Site.Params.featured_condition_size }}
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+               {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
+                        {{ $name }}
+                    </a>
+               {{ end }}
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
     <!-- Friends Blog -->
     {{ if .Site.Params.friends }}
     <section>
@@ -231,19 +243,6 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
-            {{ end }}
-        </ul>
-    </section>
-    {{ end }}
-
-    <!-- Bookmarks -->
-    {{ if .Site.Params.bookmarks }}
-    <section>
-        <hr>
-        <h5>BOOKMARKS</h5>
-        <ul class="list-inline">
-            {{ range .Site.Params.bookmark_link }}
             <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
