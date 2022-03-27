@@ -2,8 +2,15 @@
     .container {
         width: 1650px;
     }
+    .sidebar-container .short-about .list-inline>li{
+        font-size:15px
+    }
 }
-
+@media (max-width:1700px){
+    .sidebar-container .short-about .list-inline>li{
+        font-size:13px
+    }
+}
 @media (min-width:1200px){
     .post-container,.sidebar-container{
         padding-right:5%
@@ -50,7 +57,7 @@
 }
 .sidebar-container .short-about .list-inline>li{
     padding-left:0;
-    margin-right:-8px
+    margin-right:-15px
 }
 body{
     font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
