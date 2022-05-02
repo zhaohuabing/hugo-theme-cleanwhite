@@ -4,7 +4,6 @@
 <article>
     <div class="container">
         <div class="row">
-
             <!-- Post Container -->
             <div class="
             col-lg-8 col-lg-offset-1
@@ -12,11 +11,25 @@
             col-sm-12
             col-xs-12
             post-container">
+            {{ if eq (.Param "multilingual") true }}
+                {{ partial "multilingual-sel.html" . }}
 
-         	{{ .Content }}
-             <!-- 
+                <!-- Chinese Version -->
+                <div class="zh post-container">
+                    {{$file :=  "/top/about-zh.md"}}
+                    {{ $file | readFile | markdownify}}
+                </div>
+            
+                <!-- English Version -->
+                <div class="en post-container">
+                    {{ .Content }}
+                </div>
+            {{ else }}
+                {{ .Content }}
+            {{ end }}
+             
             {{ partial "comments.html" . }}
-            -->
+            
             </div>
             
             {{ partial "sidebar.html" . }}
