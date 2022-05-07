@@ -213,7 +213,7 @@
         <h5>QUICK LINKS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.bookmark_link }}
-            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href }}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
@@ -243,9 +243,22 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
             {{ end }}
         </ul>
+    </section>
+    {{ end }}
+    {{ if .Site.Params.publications }}
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>{{ .Site.Params.publications.Title }}</h5>
+        <div class="short-about">
+        {{ range .Site.Params.publications.items }}
+        <a href="{{.href}}">
+            <img src="{{.image}}" alt="avatar" style="cursor: pointer" />
+        </a>
+        {{ end }}
+        </div>
     </section>
     {{ end }}
 </div>
