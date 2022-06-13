@@ -12,6 +12,7 @@
     <section class="visible-md visible-lg">
 	<!--<hr><h5><a href="{{ "/top/about" | relLangURL }}">ABOUT ME</a></h5>-->
         <div class="short-about">
+        <br>
             {{ with .Site.Params.sidebar_avatar }}
             <a href="{{ "/top/about" | relLangURL }}">
                <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
@@ -202,6 +203,16 @@
                    </a>
                </li>
                {{ end }}
+               {{ with .Site.Params.social.website }}
+               <li>
+                   <a href="{{ . }}">
+                       <span class="fa-stack fa-lg">
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fas fa-globe fa-stack-1x fa-inverse"></i>
+                       </span>
+                   </a>
+               </li>
+               {{ end }}
                 </ul>
             </div>
     </section>
@@ -213,7 +224,7 @@
         <h5>QUICK LINKS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.bookmark_link }}
-            <li><a target="_blank" href="{{.href }}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
@@ -222,7 +233,7 @@
     {{ if .Site.Params.featured_tags }}
     <section>
         <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
+        <h5>TEMAS</h5>
         <div class="tags">
             {{ $featured_condition_size := .Site.Params.featured_condition_size }}
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
@@ -243,22 +254,9 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
-    </section>
-    {{ end }}
-    {{ if .Site.Params.publications }}
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>{{ .Site.Params.publications.Title }}</h5>
-        <div class="short-about">
-        {{ range .Site.Params.publications.items }}
-        <a href="{{.href}}">
-            <img src="{{.image}}" alt="avatar" style="cursor: pointer" />
-        </a>
-        {{ end }}
-        </div>
     </section>
     {{ end }}
 </div>
