@@ -1,4 +1,9 @@
-{{ define "header" }}
+{{define "navv"}}
+{{ partial "nav_with_title.html" . }}
+{{end}}
+
+{{define "header"}}
+<!-- {{ partial "header.html" . }} -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header {
@@ -106,24 +111,42 @@
                 <div class="side-catalog">
                     <hr class="hidden-sm hidden-xs">
                     <h5>
-                        <a class="catalog-toggle" href="#">CATALOG</a>
+                        <a class="catalog-toggle" href="#">ÍNDICE</a>
                     </h5>
                     <ul class="catalog-body"></ul>
                 </div>
             </div>
+        
             {{ end }}
-
+            <div class="
+            col-lg-2 col-lg-offset-0
+            sidebar-container
+            catalog-container">
+            <div class="last-posts">
+                <hr class="hidden-sm hidden-xs">
+                <h5>
+                    ÚLTIMAS PUBLICACIONES
+                </h5>
+                {{ range ( where .Site.RegularPages "Type" "post" | first 3 ) }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                <!-- {{ .Params.subtitle }} -->
+                {{end}}
+                </div>
+            </div>
+            
             <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
+                
+               
 
                 <!-- Featured Tags -->
                 {{ if .Site.Params.featured_tags }}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5><a href="/tags/">TEMAS</a></h5>
                     <div class="tags">
                         {{ $featured_condition_size := .Site.Params.featured_condition_size }}
                         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}

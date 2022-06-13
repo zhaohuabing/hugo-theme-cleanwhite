@@ -1,3 +1,20 @@
+{{define "navv"}}
+{{ partial "nav_with_title.html" . }}
+{{end}}
+{{define "header"}}
+<header class="intro-header" style="background-image: url('{{ .Site.Params.header_image | relURL }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>{{ .Params.title}} </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{end}}
+
 
 {{ define "main" }}
 <!-- Post Content -->

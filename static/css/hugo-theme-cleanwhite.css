@@ -11,18 +11,8 @@
         font-size:13px
     }
 }
-@media (min-width:1200px){
-    .post-container,.sidebar-container{
-        padding-right:5%
-    }
-}
-@media (min-width:768px){
-    .post-container,.sidebar-container{
-        padding-right:5%
-    }
-}
 .sidebar-container{
-    color:#bfbfbf;
+    color:#111;
     font-size:15px
 }
 .sidebar-container h5{
@@ -986,6 +976,9 @@ body{
     color: #0085a1 !important;
   }
   @media (max-width: 1200px) {
+    .sidebar-container{
+        display: none;
+    }
     .side-catalog {
       display: none;
     }
