@@ -136,15 +136,16 @@
             
             <!-- Sidebar Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
+            col-lg-2 col-lg-offset-0
+            sidebar-container
+            catalog-container">
                 
                
 
                 <!-- Featured Tags -->
                 {{ if .Site.Params.featured_tags }}
                 <section>
+                    <div class="last-posts">
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">TEMAS</a></h5>
                     <div class="tags">
@@ -157,6 +158,7 @@
                         {{ end }}
                         {{ end }}
                     </div>
+                </div>
                 </section>
                 {{ end }}
 

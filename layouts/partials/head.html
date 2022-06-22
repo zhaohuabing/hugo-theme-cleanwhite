@@ -45,7 +45,7 @@
     <meta name="keyword"  content="{{ .Site.Params.keyword }}">
     <link rel="shortcut icon" href="{{ "img/iconthree.png" | relURL }}">
 
-    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
+    <title>{{ if .Params.title }}{{ .Params.title }} | {{ .Site.Params.Title }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
 
     <link rel="canonical" href="{{ .RelPermalink }}">
 
