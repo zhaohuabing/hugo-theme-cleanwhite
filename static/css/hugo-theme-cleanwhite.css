@@ -438,8 +438,8 @@ pre code{
     margin-top:-5px
 }
 .intro-header .post-heading .meta{
-    font-family:Lora,'Times New Roman',serif;
-    font-style:italic;
+    /* font-family:Lora,'Times New Roman',serif; */
+    /* font-style:italic; */
     font-weight:300;
     font-size:18px
 }
@@ -478,10 +478,10 @@ pre code{
     margin-bottom:10px
 }
 .post-preview>.post-meta>a, .post-preview>.post-meta{
-    font-family:Lora,'Times New Roman',serif;
+    /* font-family:Lora,'Times New Roman',serif; */
     color:gray;
     font-size:17px;
-    font-style:italic;
+    /* font-style:italic; */
     margin-top:0
 }
 

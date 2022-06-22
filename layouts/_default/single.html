@@ -28,7 +28,7 @@
                     </div>
                     <h1>{{ .Title }}</h1>
                     <h2 class="subheading">{{ .Params.subtitle }}</h2>
-                    <span class="meta">
+                    <span class="subheading" style="margin-top:-0.5em;"><font size="+1">
                         {{ if .Params.metadata }}
                             {{ range $index, $element := .Params.metadata }}
                                 {{ if .link }}
@@ -49,7 +49,7 @@
                             <br>Modificado el {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
                             {{ end }}
                         {{ end }}    
-                    </span>
+                    </font></span>
                 </div>
             </div>
         </div>

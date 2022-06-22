@@ -18,7 +18,7 @@
        {{ end }}
         </div>
     </a>
-    <p class="post-meta">
+    <p class="post-subtitle" style="margin-top:+0.5em;"><font size="-0.5">
     {{ if .Params.metadata }}
         {{ range $index, $element := .Params.metadata }}
             {{ if .link }}
@@ -34,7 +34,7 @@
             <br>Última modificación el {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }} 
         {{ end }}
     {{ end }}
-    </p>
+</font></p>
 
 </div>
 <hr>
