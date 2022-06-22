@@ -125,7 +125,7 @@
             <div class="last-posts">
                 <hr class="hidden-sm hidden-xs">
                 <h5>
-                    ÚLTIMAS PUBLICACIONES
+                    ÚLTIMAS ENTRADAS
                 </h5>
                 {{ range ( where .Site.RegularPages "Type" "post" | first 3 ) }}
                 <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
