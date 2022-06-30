@@ -255,7 +255,7 @@ Then you can just put plantuml source code in markdown files and the picture wil
 
 An example:
 
-```
+<pre>
 ```plantuml
 @startuml
 Alice -> Bob: Authentication Request
@@ -265,7 +265,7 @@ Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
 @enduml
 ```
-```
+</pre>
 
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/plantuml.png)
 
