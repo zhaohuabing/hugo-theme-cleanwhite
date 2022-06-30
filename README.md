@@ -243,6 +243,33 @@ Vimeo
 {{< vimeo 146022717 >}}
 ```
 
+### Plantuml
+
+Plantuml support can be enabled at site or page level by adding the following line in the config.yaml or page header.
+
+```
+plantuml: true
+```
+
+Then you can just put plantuml source code in markdown files and the picture will be generated automatically.
+
+An example:
+
+```
+```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+```
+
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/plantuml.png)
+
+
 ## Thanks
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
 
