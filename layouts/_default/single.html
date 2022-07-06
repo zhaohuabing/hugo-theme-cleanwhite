@@ -83,6 +83,7 @@
                 {{ partial "reward.html" . }}
                 {{ end }}
 
+                {{ if or (.PrevInSection) (.NextInSection) }}
                 <hr>
                 <ul class="pager">
                     {{ if .PrevInSection }}
@@ -98,6 +99,8 @@
                     </li>
                     {{ end }}
                 </ul>
+                {{ end }}
+
                 {{ partial "comments.html" . }}
             </div>
 
