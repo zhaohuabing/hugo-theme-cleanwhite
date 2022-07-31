@@ -6,19 +6,20 @@
             {{ .Title }}
         </h2>
 	{{with .Params.subtitle }}
-        <h3 class="post-subtitle">
+        <h3 class="post-subtitle" style="font-weight:400;">
             {{ . }}
         </h3>
+        
 	{{ end }}
-        <div class="post-content-preview">
+        <div class="post-content-preview" style="font-weight:300">
 	{{ with .Description }}
             {{ . }}
         {{ else }}
             {{ .Summary}}
        {{ end }}
         </div>
-    </a>
-    <p class="post-subtitle" style="margin-top:+0.5em;"><font size="-0.5">
+    
+    <h3 class="post-subtitle" style="margin-top:+0.5em;font-weight:400;">
     {{ if .Params.metadata }}
         {{ range $index, $element := .Params.metadata }}
             {{ if .link }}
@@ -34,8 +35,8 @@
             <br>Última modificación el {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }} 
         {{ end }}
     {{ end }}
-</font></p>
-
+</h3>
+</a>
 </div>
 <hr>
 {{ end }}
