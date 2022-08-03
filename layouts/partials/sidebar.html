@@ -1,5 +1,17 @@
 
 <!-- Sidebar Container -->
+<style>
+    .text-that-needs-wrapping {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+</style>
 <div class="
     col-lg-3 col-lg-offset-0
     col-md-3 col-md-offset-0
@@ -19,7 +31,7 @@
             </a>
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
-                <p style="text-align: justify;color:#a3a3a3;">{{ . }}</p>
+                <p style="text-align: justify;word-break:normal;color:grey;font-weight:300;" class="text-that-needs-wrapping">{{ . }}</p>
             {{ end }}
            <!-- SNS Link -->
            <ul class="list-inline">

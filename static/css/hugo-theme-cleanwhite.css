@@ -687,7 +687,8 @@ body{
     font-size:14px;
     text-decoration:none;
     margin:0 1px;
-    margin-bottom:6px
+    margin-bottom:6px;
+    color: #f3f3f3
 }
 .tags a:hover,.tags .tag:hover,.tags a:active,.tags .tag:active{
     color:#fff;

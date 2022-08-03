@@ -9,6 +9,9 @@
     header.intro-header {
         background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
     }
+    /* .post-container{
+        background-color: blue;
+    } */
 </style>
 {{ if eq .Params.headerstyle "text" }}
 <header class="intro-header style-text" >
@@ -28,7 +31,7 @@
                     </div>
                     <h1>{{ .Title }}</h1>
                     <h2 class="subheading">{{ .Params.subtitle }}</h2>
-                    <span class="subheading" style="margin-top:-0.5em;"><font size="+1">
+                    <span class="subheading" style="margin-top:-1em;"><font size="+1">
                         {{ if .Params.metadata }}
                             {{ range $index, $element := .Params.metadata }}
                                 {{ if .link }}
@@ -46,7 +49,7 @@
                             {{ end }}
                             <!-- Don't show "Last Modified on" if update happened on the same day. -->
                             {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
-                            <br>Modificado el {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
+                            Modificado el {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
                             {{ end }}
                         {{ end }}    
                     </font></span>
@@ -59,7 +62,7 @@
 
 {{ define "main" }}
 <!-- Post Content -->
-<article>
+<article style="background-color:#f3f3f3;margin-top:-20px">
     <div class="container">
         <div class="row">
 
