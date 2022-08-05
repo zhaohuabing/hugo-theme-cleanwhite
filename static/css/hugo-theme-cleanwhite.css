@@ -24,13 +24,13 @@
     text-decoration:none
 }
 .sidebar-container a{
-    color:#bfbfbf!important
+    color:gray!important
 }
 .sidebar-container a:hover,.sidebar-container a:active{
     color:#337ab7!important
 }
 .sidebar-container .tags a{
-    border-color:#bfbfbf
+    border-color:gray
 }
 .sidebar-container .tags a:hover,.sidebar-container .tags a:active{
     border-color:#337ab7
