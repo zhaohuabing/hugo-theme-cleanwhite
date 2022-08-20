@@ -1,0 +1,73 @@
+{{ $image := (.Page.Resources.GetMatch  (index .Params.image)) }}
+{{ $alt := .Get "alt" }}
+{{ $width := .Get "width" }}
+{{ $borderless := .Get "borderless" }}
+{{ $placeholder := ($image.Resize "48x q20") | images.Filter (images.GaussianBlur 6) }}
+{{ $src := $image }}
+{{ $src_set := ""}}
+
+{{ $src_set = (print $image.RelPermalink " " $image.Width "w") }}
+{{ $src := $image }}
+
+{{ if ge $image.Width "500"}}
+{{ $x_small := $image.Resize "500x" }}
+{{ $src_set = (print $src_set ", "  $x_small.RelPermalink " 500w") }}
+{{ end }}
+
+{{ if ge $image.Width "800"}}
+{{ $small := $image.Resize "800x" }}
+{{ $src_set = (print $src_set ", " $small.RelPermalink " 800w") }}
+{{ end }}
+
+{{ if ge $image.Width "1200"}}
+{{ $medium := $image.Resize "1200x" }}
+{{ $src_set = (print $src_set ", " $medium.RelPermalink " 1200w") }}
+{{ end }}
+
+{{ if gt $image.Width "1500"}}
+{{ $large := $image.Resize "1500x" }}
+{{ $src_set = (print $src_set ", " $large.RelPermalink " 1500w") }}
+{{ end }}
+
+{{ $border_class := "image-border" }}
+{{ if $borderless}}
+{{ $border_class = "" }}
+{{ end }}
+
+
+<noscript>
+  <style>
+    figure.lazy {
+      display: none;
+    }
+  </style>
+  <figure class="{{ $border_class }}">
+    {{ if .Get "lightbox" }}
+    <a href='{{ $image.RelPermalink }}'>
+      {{ end }}
+      <img src="{{ $src.RelPermalink }}" {{ if $width }}width="{{$width}}"{{ end }} />
+      {{ if .Get "lightbox" }}
+    </a>
+    {{ end }}
+    <figcaption>
+      <em>{{ .Inner }}</em>
+    </figcaption>
+  </figure>
+</noscript>
+
+<figure class="{{ $border_class }} lazy">
+  {{ if .Get "lightbox" }}
+  <a href='{{ $image.RelPermalink }}'>
+    {{ end }}
+    <img class="lazyload" data-sizes="auto" src="{{ $src.RelPermalink }}" {{ if $width }}width="{{$width}}"{{ end }}
+      srcset="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}" data-src="{{ $src.RelPermalink }}"
+      data-srcset="{{ $src_set }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $alt }}" />
+    {{ if .Get "lightbox" }}
+  </a>
+  {{ end }}
+  {{ if .Inner }}
+  <figcaption>
+    <em>{{ .Inner }}</em>
+  </figcaption>
+  {{ end }}
+</figure>
