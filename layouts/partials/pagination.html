@@ -1,7 +1,7 @@
 <!-- Pagination -->
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 }}
-<ul class="pager">
+<ul class="pager" data-pagefind-ignore="all">
     {{ if $pag.HasPrev }}
     <li class="previous">
         <a href="{{ $pag.Prev.URL }}">&larr; Newer Posts</a>

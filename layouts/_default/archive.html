@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $pages := (where (where .Site.Pages "Type" "post") "IsPage" true) }}
 
-<div class="container">
+<div data-pagefind-ignore="all" class="container">
     <div class="row">
    	    <div class="
             col-lg-8 col-lg-offset-1
