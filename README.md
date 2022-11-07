@@ -174,7 +174,7 @@ Open search page in your browser: http://localhost:1313/search
 You can optionally enable Google or Baidu Analytics. Type your tracking code in the
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+googleAnalytics = "G-XXXXX"
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
 Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.

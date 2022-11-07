@@ -310,11 +310,6 @@
 </script>
 {{ end }}
 
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-
-
 <!-- Side Catalog -->
 {{ if not (eq (.Param "showtoc") false) }}
 <script type="text/javascript">
