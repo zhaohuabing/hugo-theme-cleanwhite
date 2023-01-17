@@ -79,10 +79,17 @@
     <!-- Hux Theme JavaScript -->
     <script src="{{ "js/hux-blog.min.js" | relURL }}"></script>
 
+    <!-- lazy load image JavaScript -->
+    <script src="{{ "js/lazysizes.min.js" | relURL }}"></script>
+
     <!-- Custom JS -->
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
     {{ end }}
 
 </head>
+
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics.html" . }}
+{{ end }}
 

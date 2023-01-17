@@ -10,7 +10,11 @@
             col-xs-12
             post-container
         ">
-            {{ partial "search.html" . }}
+        {{ if .Site.Params.algolia_search }}
+            {{ partial "search-algolia.html" . }}
+        {{ else }}
+            {{ partial "search-pagefind.html" . }}
+        {{ end }}
        	</div>
         {{ partial "sidebar.html" . }}
 	</div>

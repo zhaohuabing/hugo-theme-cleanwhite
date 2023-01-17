@@ -1,4 +1,5 @@
 <!-- post list -->
+<div data-pagefind-ignore="all">
 {{ range $index, $element := $.Paginator.Pages }}
 <div class="post-preview">
     <a href="{{ .Permalink }}">
@@ -39,3 +40,4 @@
 </div>
 <hr>
 {{ end }}
+</div>

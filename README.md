@@ -165,7 +165,7 @@ Add the following variables to your hugo site config so the search page can get 
 algolia_search = true
 algolia_appId = {{ YOUR_APP_ID }}
 algolia_indexName = {{ YOUR_INDEX_NAME }}
-algolia_apiKey = {{ YOUR_ADMIN_KEY }}
+algolia_apiKey = {{ YOUR_SEARCH_ONLY_KEY }}
 ```
 Open search page in your browser: http://localhost:1313/search
 
@@ -174,7 +174,7 @@ Open search page in your browser: http://localhost:1313/search
 You can optionally enable Google or Baidu Analytics. Type your tracking code in the
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+googleAnalytics = "G-XXXXX"
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
 Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
@@ -242,6 +242,33 @@ Vimeo
 ```
 {{< vimeo 146022717 >}}
 ```
+
+### Plantuml
+
+Plantuml support can be enabled at site or page level by adding the following line in the config.yaml or page header.
+
+```
+plantuml: true
+```
+
+Then you can just put plantuml source code in markdown files and the picture will be generated automatically.
+
+An example:
+
+<pre>
+```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+</pre>
+
+![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/plantuml.png)
+
 
 ## Thanks
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.

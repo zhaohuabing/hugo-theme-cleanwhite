@@ -125,7 +125,7 @@ Add the following variables to your hugo site config so the search page can get 
 algolia_search = true
 algolia_appId = {{ YOUR_APP_ID }}
 algolia_indexName = {{ YOUR_INDEX_NAME }}
-algolia_apiKey = {{ YOUR_ADMIN_KEY }}
+algolia_apiKey = {{ YOUR_SEARCH_ONLY_KEY }}
 ```
 Open search page in your browser: http://localhost:1313/search
 
@@ -134,7 +134,7 @@ Open search page in your browser: http://localhost:1313/search
 You can optionally enable Google or Baidu Analytics. Type your tracking code in the 
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+googleAnalytics = "G-XXXXX"
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
 Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.

@@ -105,14 +105,14 @@ home = ["HTML", "RSS", "Algolia"]
   href = "https://unsplash.com"
   
   [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
-  [[params.addtional_menus]]
   title =  "ARCHIVE"
-  href =  "/top/archive/"
+  href =  "/archive/"
+  [[params.addtional_menus]]
+  title =  "NOTES"
+  href =  "/notes/"
   [[params.addtional_menus]]
   title =  "ABOUT"
-  href =  "/top/about/"
+  href =  "/about/"
 
 [outputFormats.Algolia]
 baseName = "algolia"
