@@ -31,13 +31,13 @@
                     {{ if not .Site.Params.omit_categories }}
                         {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
                         <li>
-                            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
                         </li>
                         {{ end }}
                     {{ end }}
                     
 		    {{ range .Site.Params.addtional_menus }}
-                        <li><a href="{{.href | relLangURL}}">{{.title}}</a></li>
+                        <li><a href="{{.href | relLangURL}}/">{{.title}}</a></li>
                     {{ end }}
 		            <li>
                         <a href="{{ "search" | relURL }}"><i class="fa fa-search"></i></a>
