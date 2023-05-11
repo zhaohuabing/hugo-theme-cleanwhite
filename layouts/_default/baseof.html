@@ -2,6 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
+{{ if .Params.mermaid }}
+  {{ partial "mermaid.html" }}
+{{ end }}
+
 <!-- Page Header -->
 {{ block "header" .}}
 <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image | relURL }}')">
