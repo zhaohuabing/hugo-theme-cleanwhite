@@ -1,4 +1,18 @@
-
+{{ if .Site.Params.giscus }}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .Site.Params.giscus.data_repo}}"
+        data-repo-id="{{ .Site.Params.giscus.data_repo_id}}"
+        data-category="{{ .Site.Params.giscus.data_category}}"
+        data-category-id="{{ .Site.Params.giscus.data_category_id}}"
+        data-mapping="{{ .Site.Params.giscus.data_mapping}}"
+        data-reactions-enabled="{{ .Site.Params.giscus.data_reactions_enabled}}"
+        data-emit-metadata="{{ .Site.Params.giscus.data_emit_metadata}}"
+        data-theme="{{ .Site.Params.giscus.data_theme}}"
+        data-lang="{{ .Site.Params.giscus.data_lang}}"
+        crossorigin="{{ .Site.Params.giscus.crossorigin}}"
+        async>
+</script>
+{{ end }}
 {{ if .Site.Params.disqus_proxy }}
 <!-- disqus 评论框 end -->
 <div id="disqus-comment"></div>
@@ -26,20 +40,5 @@ var disq = new iDisqus('disqus-comment', {
         envId: '{{ .Site.Params.twikoo_env_id }}',
         el: '#twikoo-tcomment',
     })
-</script>
-{{ end }}
-{{ if .Site.Params.giscus }}
-<script src="https://giscus.app/client.js"
-        data-repo="{{ .Site.Params.giscus.data_repo}}"
-        data-repo-id="{{ .Site.Params.giscus.data_repo_id}}"
-        data-category="{{ .Site.Params.giscus.data_category}}"
-        data-category-id="{{ .Site.Params.giscus.data_category_id}}"
-        data-mapping="{{ .Site.Params.giscus.data_mapping}}"
-        data-reactions-enabled="{{ .Site.Params.giscus.data_reactions_enabled}}"
-        data-emit-metadata="{{ .Site.Params.giscus.data_emit_metadata}}"
-        data-theme="{{ .Site.Params.giscus.data_theme}}"
-        data-lang="{{ .Site.Params.giscus.data_lang}}"
-        crossorigin="{{ .Site.Params.giscus.crossorigin}}"
-        async>
 </script>
 {{ end }}
