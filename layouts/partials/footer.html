@@ -356,7 +356,7 @@
      * Fork by Hux to support padding
      */
 
-    loadAsync("{{ "js/jquery.nav.js" | relURL }}", function () {
+    loadAsync("{{ `js/jquery.nav.js` | relURL }}", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
