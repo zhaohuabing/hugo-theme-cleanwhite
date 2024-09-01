@@ -25,7 +25,7 @@ home = ["HTML", "RSS", "Algolia"]
   omit_categories = false
 
   # leancloud storage for page view counter
-  page_view_conter = false 
+  page_view_counter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
 
