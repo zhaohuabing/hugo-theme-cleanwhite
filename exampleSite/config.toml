@@ -55,6 +55,12 @@ home = ["HTML", "RSS", "Algolia"]
   # Follow https://twikoo.js.org/ to set up your own env_id
   twikoo_env_id = ""
 
+  # Artalk comments
+  # Follow https://artalk.js.org/ to set up your own server
+  artalk_enable = true
+  artalk_server = "https://xxx.xxx.com"
+  artalk_site = "xxx blog"
+
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = true 
   # reward_guide = "如果这篇文章对你有用,请随意打赏" 
