@@ -19,7 +19,7 @@
 <script src="{{ "js/iDisqus.js" | relURL }}"></script>
 <script>
 var disq = new iDisqus('disqus-comment', {
-    forum: '{{ .Site.DisqusShortname}}',
+    forum: '{{ .Site.Config.Services.Disqus.Shortname }}',
     api: '{{ .Site.Params.disqus_proxy }}',
 	site: '{{ .Site.Params.disqus_site }}',
     mode: 1,
@@ -28,7 +28,7 @@ var disq = new iDisqus('disqus-comment', {
     emojiPreview: true
 });
 </script>
-{{ else if .Site.DisqusShortname }}
+{{ else if .Site.Config.Services.Disqus.Shortname }}
 <!-- disqus 评论框 end -->
 <div id="disqus-comment"></div>
 {{ template "_internal/disqus.html" . }}
