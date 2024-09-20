@@ -41,7 +41,7 @@
                             {{ end }} 
                             on 
                             {{ .Date.Format "Monday, January 2, 2006" }}
-                            {{ if .Site.Params.page_view_conter }}
+                            {{ if .Site.Params.page_view_counter }}
                                 {{ partial "page_view_counter.html" . }}
                             {{ end }}
                             <!-- Don't show "Last Modified on" if update happened on the same day. -->

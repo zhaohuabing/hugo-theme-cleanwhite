@@ -25,7 +25,7 @@ home = ["HTML", "RSS", "Algolia"]
   omit_categories = false
 
   # leancloud storage for page view counter
-  page_view_conter = false 
+  page_view_counter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
 
@@ -54,6 +54,12 @@ home = ["HTML", "RSS", "Algolia"]
   # Twikoo comments
   # Follow https://twikoo.js.org/ to set up your own env_id
   twikoo_env_id = ""
+
+  # Artalk comments
+  # Follow https://artalk.js.org/ to set up your own server
+  artalk_enable = true
+  artalk_server = "https://xxx.xxx.com"
+  artalk_site = "xxx blog"
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = true 
