@@ -42,6 +42,16 @@
                    </a>
                </li>
                {{ end }}
+               {{ with .Site.Params.social.bluesky }}
+               <li>
+                   <a href="{{ . }}">
+                       <span class="fa-stack fa-lg">
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-bluesky fa-stack-1x fa-inverse"></i>
+                       </span>
+                   </a>
+               </li>
+               {{ end }}
                {{ with .Site.Params.social.zhihu }}
                <li>
                    <a target="_blank" href="{{ . }}">
