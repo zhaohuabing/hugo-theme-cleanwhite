@@ -18,7 +18,7 @@
             </a>
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
-                <p>{{ . }}</p>
+                <p>{{ . | safeHTML }}</p>
             {{ end }}
            <!-- SNS Link -->
            <ul class="list-inline">
