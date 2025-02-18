@@ -8,7 +8,7 @@ excerpt: "Kubernets 1.9版本引入了Admission Webhook(web 回调)扩展机制�
 date:    2018-05-23
 author:     "赵化冰"
 image: "/img/2018-4-25-istio-auto-injection-with-webhook/lion.jpg"
-published: true 
+publishDate: 2018-05-23
 tags:
     - Kubernetes
     - Istio

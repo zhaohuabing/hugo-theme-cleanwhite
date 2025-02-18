@@ -6,7 +6,7 @@ description: "作为一种架构模式，微服务将复杂系统切分为数十
 date:       2018-03-29 12:00:00
 author:     "赵化冰"
 image: "/img/istio-install_and_example/post-bg.jpg"
-published: true
+publishDate: 2018-03-29 12:00:00
 tags:
     - Microservice
     - Service Mesh

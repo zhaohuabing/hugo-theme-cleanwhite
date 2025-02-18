@@ -6,7 +6,7 @@ excerpt: "当应用上线以后，运维面临的一大挑战是如何能在不�
 date:       2017-11-08 15:00:00
 author:     "赵化冰"
 image: "/img/istio-canary-release/canary_bg.jpg"
-published: true
+publishDate: 2017-11-08 15:00:00
 tags:
     - Istio
 URL: "/2017/11/08/istio-canary-release/"

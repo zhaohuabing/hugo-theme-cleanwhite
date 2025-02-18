@@ -7,7 +7,7 @@ excerpt: "API Gateway和Service Mesh的关系是我最近一直在思考的问�
 date:       2018-04-11 09:32:00
 author:     "赵化冰"
 image: "/img/2018-04-11-service-mesh-vs-api-gateway/background.jpg"
-published: true
+publishDate: 2018-04-11 09:32:00
 tags:
     - Microservice
     - Service Mesh

@@ -6,7 +6,7 @@ description: "我们知道，kubernetes的Cluster Network属于私有网络，�
 date:       2017-11-28 12:00:00
 author:     "赵化冰"
 image: "https://img.zhaohuabing.com/post-bg-2015.jpg"
-published: true
+publishDate: 2017-11-28 12:00:00
 tags:
     - Kubernetes
 URL: "/2017/11/28/access-application-from-outside/"
