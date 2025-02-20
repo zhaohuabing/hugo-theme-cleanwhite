@@ -5,7 +5,7 @@ subtitle:   ""
 date:       2018-05-21 11:00:00
 author:     "赵化冰"
 image: "/img/2018-05-06-cryptocurrency_week1/bitcoin_header.jpg"
-published: false 
+publishDate: 2018-05-21 11:00:00
 tags:
     - Jekyll:q 
     - Bitcoin

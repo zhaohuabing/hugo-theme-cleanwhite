@@ -6,7 +6,7 @@ excerpt: "Everything about setting up my own ubuntu desktop, it's just a Note in
 date:    2018-05-24
 author:     "赵化冰"
 image: "/img/2018-05-23-service_2_service_auth/background.jpg"
-published: true 
+publishDate: 2018-05-24
 tags:
     - ubuntu 
 URL: "/2018/05/24/set_up_my_ubuntu_desktop/"

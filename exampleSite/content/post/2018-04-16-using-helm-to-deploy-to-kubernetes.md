@@ -7,7 +7,7 @@ excerpt: "Helm是Kubernetes生态系统中的一个软件包管理工具。本�
 date:       2018-04-16 15:00:00
 author:     "赵化冰"
 image: "/img/2018-04-16-using-helm-to-deploy-to-kubernetes/buffalo.jpg"
-published: true
+publishDate: 2018-04-16 15:00:00
 tags:
     - Kubernetes
     - Helm

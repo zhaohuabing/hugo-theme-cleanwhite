@@ -6,7 +6,7 @@ description: "Nginmesh是NGINX的Service Mesh开源项目，用于Istio服务网
 date:       2018-01-02 12:00:00
 author:     "赵化冰"
 image: "img/post-bg-2015.jpg"
-published: true
+publishDate: 2018-01-02 12:00:00
 tags:
     - Istio 
     - service Mesh

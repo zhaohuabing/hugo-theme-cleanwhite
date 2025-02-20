@@ -7,7 +7,7 @@ excerpt: "如何使用非root用户执行docker命令"
 date:       2018-02-09 10:00:00
 author:     "赵化冰"
 image:     "/img/docker.jpg"
-published: true
+publishDate: 2018-02-09 10:00:00
 showtoc: false 
 tags:
     - Tips

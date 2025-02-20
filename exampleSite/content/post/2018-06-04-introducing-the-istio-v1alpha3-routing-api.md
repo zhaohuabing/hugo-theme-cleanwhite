@@ -7,7 +7,7 @@ description: "介绍Istio v1alpha3 routing API及其设计原则"
 date:       2018-06-04
 author:     "赵化冰"
 image: "/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/background.jpg"
-published: true 
+publishDate: 2018-06-04
 tags:
     - Istio 
 

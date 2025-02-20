@@ -2,12 +2,18 @@ baseurl = "https://zhaohuabing.com"
 title = "Huabing Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-googleAnalytics = ""
 preserveTaxonomyNames = true
-paginate = 5 #frontpage pagination
 hasCJKLanguage = true
+
+[services]
+  # Enable comments by entering your Disqus shortname
+  [services.disqus]
+    shortname = ""
+  [services.googleAnalytics]
+    id = ""
+
+[pagination]
+  pagerSize = 5 # frontpage pagination
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
@@ -137,3 +143,6 @@ params = ["categories", "tags"]
     startLevel = 1
   [markup.highlight]
     style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
