@@ -62,9 +62,9 @@ $ hugo serve -t  hugo-theme-cleanwhite
 ```
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
-If you start from scratch, there is a working Hugo site configured with the CleanWhite theme in the [exampleSite](https://github.com/zhaohuabing/hugo-theme-cleanwhite/tree/master/exampleSite) directory.  You can use it as a starting point for your site.
+If you start from scratch, there is a working Hugo site configured with the CleanWhite theme in the [exampleSite](/exampleSite/) directory.  You can use it as a starting point for your site.
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo
+For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
 
 ## Configuration
 First, let's take a look at the [hugo.toml](/exampleSite/hugo.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
