@@ -96,7 +96,9 @@ Install [the Giscus app](https://github.com/marketplace/giscus) on your GitHub r
 To enable Disqus, create an account in Disqus and write down your shortname.
 
 ```toml
-disqusShortname = "your-disqus-short-name"
+[services]
+  [services.disqus]
+    shortname = "your-disqus-short-name"
 ```
 
 #### Disqus behind a proxy
@@ -169,15 +171,25 @@ algolia_apiKey = {{ YOUR_SEARCH_ONLY_KEY }}
 ```
 Open search page in your browser: http://localhost:1313/search
 
-### Analytics
+### Google Analytics
 
-You can optionally enable Google or Baidu Analytics. Type your tracking code in the
+You can optionally enable Google Analytics. Type your tracking code in the
 
 ```toml
-googleAnalytics = "G-XXXXX"
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXX"
+```
+Leave the `id` key empty to disable it.
+
+### Baidu Analytics
+
+You can optionally enable Baidu Analytics. Type your tracking code in the
+
+```toml
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
-Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
+Leave the 'ba_track_id ' key empty to disable it.
 
 ### Wechat Pay & Alipay Rewards
 

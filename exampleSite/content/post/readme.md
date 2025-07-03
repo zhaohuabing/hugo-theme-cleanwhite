@@ -67,9 +67,11 @@ First, let's take a look at the [hugo.toml](https://github.com/zhaohuabing/hugo-
 The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
 
 ```toml
-disqusShortname = "your-disqus-short-name"
+[services]
+  [services.disqus]
+    shortname = "your-disqus-short-name"
 ```
-You can disable the comments system by leaving the `disqusShortname` empty.
+You can disable the comments system by leaving the `shortname` empty.
 
 ### Disqus in China
 Disqus is inaccessible in China. To get it to work, we can set up a proxy with [disqus-php-api](https://github.com/zhaohuabing/disqus-php-api) in a host which sets between the client browser and the Disqus server. The idea is that if Disqus can be reached in the guest network, the blog page will show the original Disqus comments UI, otherwise, it will downgrade and use the proxy to access the Disqus, the UI will be a little different, but the visitors can still write their comments on the page.
@@ -134,10 +136,20 @@ Open search page in your browser: http://localhost:1313/search
 You can optionally enable Google or Baidu Analytics. Type your tracking code in the 
 
 ```toml
-googleAnalytics = "G-XXXXX"
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXX"
+```
+Leave the `id` key empty to disable it.
+
+### Baidu Analytics
+
+You can optionally enable Baidu Analytics. Type your tracking code in the
+
+```toml
 ba_track_id  = "XXXXXXXXXXXXXXXX"
 ```
-Leave the `googleAnalytics`  or 'ba_track_id ' key empty to disable it.
+Leave the 'ba_track_id ' key empty to disable it.
 
 ### Wechat Pay & Alipay Rewards
 
