@@ -49,7 +49,7 @@ If your site is already a git project, you may want to choose to add the cleanwh
 $ mkdir themes
 $ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite.git themes/hugo-theme-cleanwhite
 ```
-Run  Hugo Build-in Server Locally
+Run  Hugo Built-in Server Locally
 
 ```
 $ hugo serve -t  hugo-theme-cleanwhite
