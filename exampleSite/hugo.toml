@@ -117,10 +117,10 @@ home = ["HTML", "RSS", "Algolia"]
   title = "unsplash"
   href = "https://unsplash.com"
   
-  [[params.add itional_menus]]
+  [[params.additional_menus]]
   title =  "ARCHIVE"
   href =  "/archive/"
-  [[params.add itional_menus]]
+  [[params.additional_menus]]
   title =  "NOTES"
   href =  "/notes/"
   [[params.additional_menus]]
