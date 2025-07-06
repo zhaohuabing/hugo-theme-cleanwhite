@@ -1,0 +1,30 @@
+{{ $fontFiles := slice -}}
+{{ $data := dict -}}
+{{ $url := ( printf "https://unpkg.com/katex@latest/dist/fonts?meta" ) -}}
+{{ with try (resources.GetRemote $url) -}}
+  {{ with .Err -}}
+    {{ errorf "%s" . -}}
+  {{ else with ( .Value | unmarshal ) -}}
+      {{ range .files -}}
+        {{ $fontFiles = $fontFiles | append .path -}}
+      {{ end -}}
+  {{ else -}}
+    {{ errorf "Unable to get fonts meta data %q from CDN. Reason: invalid KaTeX version %q." $url "latest" -}}
+  {{ end -}}
+{{ end -}}
+
+{{ range $fontFile := $fontFiles -}}
+  {{ $fontUrl := (printf "https://unpkg.com/katex@latest%s" $fontFile) -}}
+  {{ with try (resources.GetRemote $fontUrl) -}}
+    {{ with .Err -}}
+      {{ errorf "Could not retrieve KaTeX font file from CDN. Reason: %s." . -}}
+    {{ else with .Value -}}
+      {{ with resources.Copy (printf "css/fonts/%s" (replace $fontFile "/dist/fonts/" "")) . -}}
+        {{ .Publish -}}
+      {{ end -}}
+    {{ else -}}
+      {{ errorf "Could not retrieve font file %q from CDN. Reason: invalid KaTeX version %q." $fontUrl "latest" -}}
+      {{ break -}}
+    {{ end -}}
+  {{ end -}}
+{{ end -}}

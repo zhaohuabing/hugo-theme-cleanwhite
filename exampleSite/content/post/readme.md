@@ -161,6 +161,24 @@ reward = true
 ```
 * Replace the QR codes of Wechat Pay & Alipay by overriding the photos in folder /static/img/reward/, otherwise the money will be sent to my accounts!
 
+### Authoring mathematical and chemical equations with \(\KaTeX\)
+
+If you want to make use if KaTeX on your site, enable and configure the goldmark `passthrough` extension
+inside your `hugo.toml`/`hugo.yaml`/`hugo.json`. You may want to edit the definition of the delimiters to
+meet your own needs. For details, see the official [Hugo docs](https://gohugo.io/content-management/mathematics/#step-1).
+
+```toml
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+```
+
+Afterwards, you can author mathematical and chemical equations on your site. Please read this [blog post] for more details on this subject.
 
 ## Thank
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.

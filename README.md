@@ -46,7 +46,7 @@ $ cd themes
 $ git clone https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
 $ cp -r hugo-theme-cleanwhite/exampleSite/** ../
 $ cd ..
-$ hugo serve
+$ hugo server
 ```
 
 If your site is already a git project, you may want to choose to add the cleanwhite theme as a submodule to avoid messing up your existing git repository.
@@ -58,7 +58,7 @@ $ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite.git the
 Run  Hugo Build-in Server Locally
 
 ```
-$ hugo serve -t  hugo-theme-cleanwhite
+$ hugo server -t  hugo-theme-cleanwhite
 ```
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
