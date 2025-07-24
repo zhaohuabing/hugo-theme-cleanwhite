@@ -38,6 +38,8 @@
     <meta property="twitter:description" content="{{ .Site.Params.description }}" />
     {{ end }}
 
+    <meta property="og:url" content="{{ .Permalink }}" />
+
     {{ if .Params.summary }}
     <meta property="twitter:card" content="{{ .Params.summary }}" />
     {{ else }}
@@ -55,7 +57,7 @@
     {{ if .Site.Params.disqus_proxy }}
     <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>
     {{ end }}
-    
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
@@ -95,4 +97,3 @@
 {{ if .Site.Config.Services.GoogleAnalytics.ID }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
-
