@@ -1,0 +1,14 @@
+{{ $cssFile := cond hugo.IsProduction "katex.min.css" "katex.css" -}}
+{{ $cssUrl := printf "https://unpkg.com/katex@latest/dist/%s" $cssFile -}}
+{{ with try (resources.GetRemote $cssUrl) -}}
+  {{ with .Err -}}
+    {{ errorf "Could not retrieve KaTeX css file from CDN. Reason: %s." . -}}
+  {{ else with .Value -}}
+    {{ with resources.Copy (printf "css/%s" $cssFile) . -}}
+      {{ $cssHash := . | fingerprint "sha512" -}}
+<link rel="stylesheet" href="{{- .RelPermalink -}}" integrity="{{- $cssHash.Data.Integrity -}}" crossorigin="anonymous">
+    {{ end -}}
+  {{ else -}}
+    {{ errorf "Could not retrieve css file %q from CDN. Reason: invalid KaTeX version %q." $cssUrl "latest" -}}
+  {{ end -}}
+{{ end -}}
