@@ -3,8 +3,33 @@
 {{- $section := $.Site.GetPage "section" .Section }}
 {{- range .Site.AllPages -}}
   {{- if and (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
-    {{- if .File -}}
-    {{- $.Scratch.Add "index" (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "description" .Description "dir" .File.Dir "expirydate" .ExpiryDate.UTC.Unix "fuzzywordcount" .FuzzyWordCount "keywords" .Keywords "kind" .Kind "lang" .Lang "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "html" .Params.Description "title" .Title "type" .Type "url" .RelPermalink "weight" .Weight "wordcount" .WordCount "section" .Section "tags" .Params.Tags "categories" .Params.Categories "author" .Params.authors "content" .Params.Description "excerpt_html" .Params.Description "excerpt_text" .Params.Description "summary" .Summary)}}
+    {{- if and .File (not .Params.search_exclude) -}}   {{/* ⟵ exclude by flag */}}
+      {{- $.Scratch.Add "index" (dict
+        "objectID" .File.UniqueID
+        "date" .Date.UTC.Unix
+        "dir" .File.Dir
+        "expirydate" .ExpiryDate.UTC.Unix
+        "fuzzywordcount" .FuzzyWordCount
+        "keywords" .Keywords
+        "kind" .Kind
+        "lang" .Lang
+        "lastmod" .Lastmod.UTC.Unix
+        "permalink" .Permalink
+        "publishdate" .PublishDate
+        "readingtime" .ReadingTime
+        "relpermalink" .RelPermalink
+        "html" .Params.Description
+        "title" .Title
+        "type" .Type
+        "url" .RelPermalink
+        "weight" .Weight
+        "wordcount" .WordCount
+        "section" .Section
+        "tags" .Params.Tags
+        "categories" .Params.Categories
+        "author" .Params.authors
+        "content" (truncate 1000 .Plain)
+      ) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
