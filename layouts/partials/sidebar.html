@@ -261,4 +261,15 @@
         </div>
     </section>
     {{ end }}
+    {{ if .Site.Params.last_posts }}
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>{{ .Site.Params.last_posts_title | default `LAST POSTS` }}</h5>
+        <ul>
+        {{ range ((where (where .Site.Pages "Type" "post") "IsPage" true).Limit (.Site.Params.last_posts_count | default 5 | int)) }}
+            <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
+        {{ end }}
+        </ul>
+    </section>
+    {{ end }}
 </div>

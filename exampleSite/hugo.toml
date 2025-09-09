@@ -75,6 +75,11 @@ home = ["HTML", "RSS", "Algolia"]
   bookmarks = false
   about_me = true
 
+  # Last posts
+  last_posts = true
+  #last_posts_title = "LAST POSTS"
+  #last_posts_count = 5
+
   # Include any custom CSS and/or JS files, url or relative to /static folder
   #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
