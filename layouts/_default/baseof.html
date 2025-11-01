@@ -24,9 +24,13 @@
 
 {{ partial "footer.html" . }}
 {{ if .Store.Get "hasMermaid" }}
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+  <!-- Use the UMD build instead of ESM so Cloudflare won't rewrite it -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
+          data-cfasync="false" defer></script>
+  <script data-cfasync="false" defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    });
   </script>
 {{ end }}
 </body>
