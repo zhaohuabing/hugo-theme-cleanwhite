@@ -285,12 +285,7 @@
     (function(){
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https'){
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else{
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
@@ -436,7 +431,7 @@
   Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
     let image = document.createElement("IMG");
     image.loading = 'lazy'; // Lazy loading
-    image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+    image.src = 'https://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
     code.parentNode.parentNode.insertBefore(image, code.parentNode);
     code.parentNode.style.display = 'none';
   });
