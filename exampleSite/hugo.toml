@@ -150,6 +150,9 @@ params = ["categories", "tags"]
     style = "dracula"
   [markup.goldmark]
     [markup.goldmark.renderer]
+      # SECURITY NOTE: unsafe = true allows raw HTML in markdown content.
+      # Only enable this if you trust all content authors and need features
+      # like KaTeX math rendering. Disable if accepting untrusted content.
       unsafe = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
