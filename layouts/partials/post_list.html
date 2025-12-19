@@ -15,7 +15,7 @@
 	{{ with .Description }}
             {{ . }}
         {{ else }}
-            {{ .Summary}}
+            {{ .Summary | plainify}}
        {{ end }}
         </div>
     </a>
