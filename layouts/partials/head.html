@@ -3,6 +3,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Anti-FOC (Flash of Content) Script for Dark Mode -->
+    <script>
+    (function() {
+        const theme = localStorage.getItem('cleanwhite-theme') ||
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
+
     <!-- start ogp -->
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:type" content="article">
@@ -62,7 +71,10 @@
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
     <!-- Clean White theme CSS -->
-    <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.min.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.css" | relURL }}">
+
+    <!-- Theme Variables CSS -->
+    <link rel="stylesheet" href="{{ "css/theme-variables.css" | relURL }}">
 
     <!-- zangshang CSS -->
     <link rel="stylesheet" href="{{ "css/zanshang.min.css" | relURL }}">

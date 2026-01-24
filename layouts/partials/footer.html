@@ -271,6 +271,41 @@
     }
 </script>
 
+<!-- Update tagcloud colors for dark mode -->
+<script>
+    (function() {
+        function updateTagcloudColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const startColor = isDark ? '#808080' : '#bbbbee';
+            if($('#tag_cloud').length !== 0 && $.fn.tagcloud) {
+                $.fn.tagcloud.defaults = {
+                    color: {start: startColor, end: '#0085a1'},
+                };
+                $('#tag_cloud a').tagcloud();
+            }
+        }
+
+        // Update initially
+        $(document).ready(function() {
+            updateTagcloudColors();
+        });
+
+        // Watch for theme changes
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'data-theme') {
+                    updateTagcloudColors();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+    })();
+</script>
+
 <!--fastClick.js -->
 <script>
     loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
@@ -278,6 +313,9 @@
         if($nav) FastClick.attach($nav);
     })
 </script>
+
+<!-- Theme Toggle -->
+<script src="{{ "js/theme-toggle.js" | relURL }}"></script>
 
 <!-- push page to Baidu -->
 {{ if .Site.Params.ba_track_id }}
