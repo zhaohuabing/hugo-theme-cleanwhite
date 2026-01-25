@@ -91,31 +91,29 @@ const ThemeManager = (function() {
     }
 
     /**
-     * Update Giscus theme to match our site theme
+     * Update Giscus theme dynamically
      */
     function updateGiscusTheme(theme) {
-        const giscusIframe = document.querySelector('iframe.giscus-frame');
-        if (giscusIframe) {
-            // Send message to Giscus to update theme
-            const message = {
-                setConfig: {
-                    theme: theme === THEMES.DARK ? 'dark' : 'light'
+        const iframe = document.querySelector('iframe[src*="giscus.app"]');
+        if (!iframe) return;
+
+        try {
+            // Send postMessage to Giscus iframe to update theme
+            iframe.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        theme: theme
+                    }
                 }
-            };
-            giscusIframe.contentWindow.postMessage(message, 'https://giscus.app');
+            }, 'https://giscus.app');
+        } catch (e) {
+            // If iframe isn't ready yet, retry after a short delay
+            console.warn('Failed to update Giscus theme, retrying...', e);
+            setTimeout(function() {
+                updateGiscusTheme(theme);
+            }, 100);
         }
     }
-
-    /**
-     * Listen for Giscus messages
-     */
-    window.addEventListener('message', function(event) {
-        if (event.origin !== 'https://giscus.app') return;
-        if (typeof event.data !== 'object' || !event.data.giscus) return;
-
-        const giscusData = event.data.giscus;
-        // Could add more handlers here if needed
-    });
 
     /**
      * Update the toggle button icon

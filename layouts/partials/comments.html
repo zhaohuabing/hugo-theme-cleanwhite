@@ -1,16 +1,36 @@
 {{ if .Site.Params.giscus }}
-<script src="https://giscus.app/client.js"
-        data-repo="{{ .Site.Params.giscus.data_repo}}"
-        data-repo-id="{{ .Site.Params.giscus.data_repo_id}}"
-        data-category="{{ .Site.Params.giscus.data_category}}"
-        data-category-id="{{ .Site.Params.giscus.data_category_id}}"
-        data-mapping="{{ .Site.Params.giscus.data_mapping}}"
-        data-reactions-enabled="{{ .Site.Params.giscus.data_reactions_enabled}}"
-        data-emit-metadata="{{ .Site.Params.giscus.data_emit_metadata}}"
-        data-theme="{{ .Site.Params.giscus.data_theme}}"
-        data-lang="{{ .Site.Params.giscus.data_lang}}"
-        crossorigin="{{ .Site.Params.giscus.crossorigin}}"
-        async>
+<!-- Giscus placeholder - will be replaced with actual script -->
+<div id="giscus-placeholder"></div>
+
+<script>
+// Dynamically load Giscus with current theme
+(function() {
+    function loadGiscus() {
+        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        var placeholder = document.getElementById('giscus-placeholder');
+        if (!placeholder) return;
+
+        var giscusScript = document.createElement('script');
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.setAttribute('data-repo', '{{ .Site.Params.giscus.data_repo}}');
+        giscusScript.setAttribute('data-repo-id', '{{ .Site.Params.giscus.data_repo_id }}');
+        giscusScript.setAttribute('data-category', '{{ .Site.Params.giscus.data_category }}');
+        giscusScript.setAttribute('data-category-id', '{{ .Site.Params.giscus.data_category_id }}');
+        giscusScript.setAttribute('data-mapping', '{{ .Site.Params.giscus.data_mapping }}');
+        giscusScript.setAttribute('data-reactions-enabled', '{{ .Site.Params.giscus.data_reactions_enabled }}');
+        giscusScript.setAttribute('data-emit-metadata', '{{ .Site.Params.giscus.data_emit_metadata }}');
+        giscusScript.setAttribute('data-theme', currentTheme);
+        giscusScript.setAttribute('data-lang', '{{ .Site.Params.giscus.data_lang }}');
+        giscusScript.setAttribute('crossorigin', '{{ .Site.Params.giscus.crossorigin }}');
+        giscusScript.async = true;
+
+        // Replace placeholder with the script (keeps original position)
+        placeholder.parentNode.replaceChild(giscusScript, placeholder);
+    }
+
+    // Load Giscus immediately
+    loadGiscus();
+})();
 </script>
 {{ end }}
 {{ if .Site.Params.disqus_proxy }}
