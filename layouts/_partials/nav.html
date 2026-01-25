@@ -44,10 +44,39 @@
 		           </li>
                     {{ if not (eq .Site.Params.dark_mode_toggle false) }}
 		            <li>
-                        <a href="#" id="theme-toggle" title="Toggle dark mode">
+                        <a href="#" id="theme-toggle" title="Toggle dark mode" style="opacity: 0;">
                             <i class="fa fa-moon"></i>
+                            <i class="fa fa-sun" style="display: none;"></i>
                         </a>
 		           </li>
+                    <script>
+                    (function() {
+                        // Set correct icon immediately to prevent flash
+                        var theme = localStorage.getItem('cleanwhite-theme') ||
+                                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                        var toggleBtn = document.getElementById('theme-toggle');
+                        if (toggleBtn) {
+                            var moonIcon = toggleBtn.querySelector('.fa-moon');
+                            var sunIcon = toggleBtn.querySelector('.fa-sun');
+
+                            if (theme === 'dark') {
+                                if (moonIcon) moonIcon.style.display = 'none';
+                                if (sunIcon) sunIcon.style.display = 'inline';
+                                toggleBtn.setAttribute('title', 'Switch to light mode');
+                            } else {
+                                if (moonIcon) moonIcon.style.display = 'inline';
+                                if (sunIcon) sunIcon.style.display = 'none';
+                                toggleBtn.setAttribute('title', 'Switch to dark mode');
+                            }
+
+                            // Show button with correct icon
+                            requestAnimationFrame(function() {
+                                toggleBtn.style.transition = 'opacity 0.2s ease';
+                                toggleBtn.style.opacity = '1';
+                            });
+                        }
+                    })();
+                    </script>
                     {{ end }}
                 </ul>
             </div>
