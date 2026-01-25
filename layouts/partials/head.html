@@ -6,6 +6,13 @@
     <!-- Anti-FOC (Flash of Content) Script for Dark Mode -->
     <script>
     (function() {
+        // Auto-theme (sunrise/sunset) is enabled by default
+        // Can be disabled by setting auto_theme: false in config
+        const autoTheme = {{ if not .Site.Params.auto_theme }}false{{ else }}true{{ end }};
+        if (autoTheme) {
+            document.documentElement.setAttribute('data-auto-theme', 'true');
+        }
+
         const theme = localStorage.getItem('cleanwhite-theme') ||
                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);

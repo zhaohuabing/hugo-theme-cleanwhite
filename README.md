@@ -281,6 +281,67 @@ Alice <-- Bob: Another authentication Response
 
 ![screenshot](https://raw.githubusercontent.com/zhaohuabing/hugo-theme-cleanwhite/master/images/plantuml.png)
 
+### Dark Mode
+
+CleanWhite theme comes with built-in dark mode support that automatically switches between light and dark themes based on your time of day (sunrise/sunset).
+
+#### Features
+
+- **Automatic theme switching**: Switches to dark mode after sunset and light mode after sunrise
+- **Manual override**: Users can manually toggle between light/dark mode using the moon/sun icon in the navbar
+- **Persistent preference**: Manual theme selection is saved and persists across sessions
+- **System preference detection**: Falls back to OS-level dark mode preference if auto-theme is disabled
+
+#### Configuration
+
+Dark mode is **enabled by default** with automatic sunrise/sunset switching. You can configure it in your `config.yaml`:
+
+```yaml
+params:
+  # Enable/disable automatic theme switching based on sunrise/sunset (default: true)
+  auto_theme: true
+
+  # Enable/disable dark mode toggle button in navbar (default: true)
+  # Set to false to completely disable dark mode
+  dark_mode_toggle: true
+```
+
+#### Theme Behavior
+
+**Auto-Theme Mode (default):**
+- **Day time** (approximately 6:30 AM - 6:30 PM): Light mode
+- **Night time**: Dark mode
+- Sunrise/sunset times adjust seasonally (±1 hour)
+- Theme updates automatically every minute
+- Manual override stops auto-switching and respects your choice
+
+**System Preference Mode** (when `auto_theme: false`):
+- Follows your OS dark mode preference
+- Manual toggle still available
+
+**Color Scheme**
+
+The dark mode uses a carefully designed color palette inspired by jimmysong.io:
+- Background: `#040b1b` (deep blue-black)
+- Text: `#c9d1d9` (soft gray-white)
+- Links: `#7fb4ff` (calm blue)
+- Accents: Subtle blue tones for a comfortable reading experience
+
+#### Customization
+
+If you want to customize the dark mode colors, you can override the CSS variables in your custom CSS file:
+
+```css
+[data-theme="dark"] {
+    --color-bg: #040b1b;
+    --color-text-main: #c9d1d9;
+    --color-primary: #7fb4ff;
+    /* Add more customizations... */
+}
+```
+
+The theme uses CSS custom properties (variables) for all colors, making it easy to customize the appearance while maintaining consistency across all components.
+
 
 ## Thanks
 Thanks for the great jobs of [huxblog Jekyll Theme](https://github.com/Huxpro/huxpro.github.io) and [Clean Blog Jekyll Theme](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) which are the the two upstream projects CleanWhite Hugo theme is based on.
@@ -290,5 +351,5 @@ If you find any problems, please feel free to [raise an issue](https://github.co
 
 If it's helpful for you, I would appreciate it if you could star this repository, thanks!
 
-## Who is using cleanwhite？(谁在使用 cleanwhite？) 
+## Who is using cleanwhite？(谁在使用 cleanwhite？)
 Sincerely thank everyone who constantly keeps on using and supporting cleanwhite. Feel free to leave a comment on [this issue](https://github.com/zhaohuabing/hugo-theme-cleanwhite/issues/115) to include information about your blog.

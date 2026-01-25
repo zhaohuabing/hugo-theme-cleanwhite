@@ -31,7 +31,47 @@ const ThemeManager = (function() {
      * Get system preference for dark mode
      */
     function getSystemPreference() {
+        // Check if user wants auto theme based on sunrise/sunset
+        const useAutoTheme = document.documentElement.getAttribute('data-auto-theme') === 'true';
+
+        if (useAutoTheme) {
+            return getSunriseSunsetTheme();
+        }
+
+        // Fall back to system preference
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return THEMES.DARK;
+        }
+        return THEMES.LIGHT;
+    }
+
+    /**
+     * Calculate sunrise/sunset times and determine appropriate theme
+     */
+    function getSunriseSunsetTheme() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const currentTime = hours + minutes / 60;
+
+        // Simple algorithm for sunrise/sunset based on day of year
+        // Approximate values (can be improved with precise calculation)
+        const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+
+        // Approximate sunrise/sunset times for mid-latitude locations
+        // Sunrise ranges from ~6:30 to ~7:30 (varies by season)
+        // Sunset ranges from ~16:30 to ~19:30 (varies by season)
+        const baseSunrise = 6.5; // 6:30 AM
+        const baseSunset = 18.5; // 6:30 PM
+
+        // Seasonal adjustment (±1 hour)
+        const seasonalOffset = Math.sin((dayOfYear - 80) / 365 * 2 * Math.PI) * 1;
+
+        const sunriseTime = baseSunrise + seasonalOffset;
+        const sunsetTime = baseSunset + seasonalOffset;
+
+        // Dark mode before sunrise or after sunset
+        if (currentTime < sunriseTime || currentTime > sunsetTime) {
             return THEMES.DARK;
         }
         return THEMES.LIGHT;
@@ -152,8 +192,22 @@ const ThemeManager = (function() {
             });
         }
 
+        // Check if auto-theme (sunrise/sunset) is enabled
+        const useAutoTheme = document.documentElement.getAttribute('data-auto-theme') === 'true';
+
+        if (useAutoTheme && !storedTheme) {
+            // Update theme every minute based on sunrise/sunset
+            setInterval(function() {
+                const newTheme = getSunriseSunsetTheme();
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (newTheme !== currentTheme) {
+                    applyTheme(newTheme);
+                }
+            }, 60000); // Check every minute
+        }
+
         // Watch for system preference changes (only if user hasn't set a manual preference)
-        if (!storedTheme && window.matchMedia) {
+        if (!storedTheme && !useAutoTheme && window.matchMedia) {
             const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
             if (mediaQuery.addEventListener) {
                 mediaQuery.addEventListener('change', function(e) {
