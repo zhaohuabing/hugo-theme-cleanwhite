@@ -1,0 +1,745 @@
+/**
+ * Dark Mode CSS Variables for Hugo CleanWhite Theme
+ * Defines CSS custom properties for light and dark themes
+ */
+
+/* Prevent flash on theme switch */
+.theme-switching * {
+    transition: none !important;
+}
+
+/* ===== Light Mode (Default) ===== */
+:root {
+    /* Core colors */
+    --color-bg: #ffffff;
+    --color-text-main: #404040;
+    --color-text-secondary: #a3a3a3;
+    --color-text-muted: gray;
+    --color-primary: #0085a1;
+    --color-primary-light: #337ab7;
+    --color-border: #eee;
+    --color-border-light: #f2f2f2;
+    --color-border-dark: #ddd;
+
+    /* Background colors */
+    --bg-input: #ffffff;
+    --bg-tag-cloud: #D6D6D6;
+    --bg-catalog-active: #f5f5f5;
+    --bg-mobile-menu: #ffffff;
+    --bg-tag-active: rgba(255, 255, 255, 0.4);
+    --bg-tag-invert: rgba(0, 0, 0, 0.05);
+    --bg-pager: #ffffff;
+    --bg-disabled: #404040;
+
+    /* Sidebar colors */
+    --sidebar-text: #bfbfbf;
+    --sidebar-heading: gray;
+
+    /* Navbar colors */
+    --navbar-bg: transparent;
+    --navbar-text: #404040;
+    --navbar-text-hover: #0085a1;
+    --navbar-toggle-icon: #ffffff;
+    --navbar-toggle-icon-invert: #404040;
+
+    /* Link colors */
+    --link-color: #404040;
+    --link-color-post: #337ab7;
+    --link-hover: #0085a1;
+
+    /* Tag colors */
+    --tag-border: rgba(255, 255, 255, 0.8);
+    --tag-text: #ffffff;
+    --tag-border-hover: #ffffff;
+
+    /* Button colors */
+    --btn-default-bg: transparent;
+    --btn-default-hover: #0085a1;
+    --btn-default-text: #404040;
+
+    /* Other UI elements */
+    --caption-text: inherit;
+    --copyright-link: #337ab7;
+    --pager-disabled: gray;
+    --selection-bg: #0085a1;
+    --selection-text: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.258824);
+    --mobile-menu-shadow: rgba(0, 0, 0, 0.117647);
+    --mobile-menu-shadow-2: rgba(0, 0, 0, 0.239216);
+    --tagcloud-start: #bbbbee;
+    --tagcloud-end: #0085a1;
+
+    /* Transition */
+    --theme-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+/* ===== System Preference Dark Mode (only applies when no manual theme is set) ===== */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        /* Core colors - Jimmy Song's dark theme */
+        --color-bg: #040b1b;
+        --color-text-main: #c9d1d9;
+        --color-text-secondary: #a4b2ce;
+        --color-text-muted: #8b9db3;
+        --color-primary: #7fb4ff;
+        --color-primary-light: #9ec5ff;
+        --color-border: rgba(148, 197, 255, 0.18);
+        --color-border-light: rgba(148, 197, 255, 0.1);
+        --color-border-dark: rgba(148, 197, 255, 0.25);
+
+        /* Background colors */
+        --bg-input: #081123;
+        --bg-tag-cloud: rgba(7, 14, 30, 0.75);
+        --bg-catalog-active: rgba(8, 17, 35, 0.78);
+        --bg-mobile-menu: rgba(7, 14, 30, 0.84);
+        --bg-tag-active: rgba(126, 190, 255, 0.15);
+        --bg-tag-invert: rgba(126, 190, 255, 0.1);
+        --bg-pager: rgba(8, 17, 35, 0.78);
+        --bg-disabled: rgba(12, 21, 40, 0.68);
+
+        /* Sidebar colors */
+        --sidebar-text: #a4b2ce;
+        --sidebar-heading: #eff4ff;
+
+        /* Navbar colors */
+        --navbar-bg: transparent;
+        --navbar-text: #eff4ff;
+        --navbar-text-hover: #7fb4ff;
+        --navbar-toggle-icon: #ffffff;
+        --navbar-toggle-icon-invert: #eff4ff;
+
+        /* Link colors */
+        --link-color: #7fb4ff;
+        --link-color-post: #9ec5ff;
+        --link-hover: #7fb4ff;
+
+        /* Tag colors */
+        --tag-border: rgba(126, 190, 255, 0.4);
+        --tag-text: #eff4ff;
+        --tag-border-hover: #7fb4ff;
+
+        /* Button colors */
+        --btn-default-bg: transparent;
+        --btn-default-hover: #4f8cff;
+        --btn-default-text: #c9d1d9;
+
+        /* Other UI elements */
+        --caption-text: #a4b2ce;
+        --copyright-link: #7fb4ff;
+        --pager-disabled: rgba(164, 178, 206, 0.5);
+        --selection-bg: #4f8cff;
+        --selection-text: #ffffff;
+        --shadow-color: rgba(1, 4, 18, 0.58);
+        --mobile-menu-shadow: rgba(2, 6, 18, 0.62);
+        --mobile-menu-shadow-2: rgba(1, 5, 20, 0.68);
+        --tagcloud-start: rgba(164, 178, 206, 0.7);
+        --tagcloud-end: #7fb4ff;
+    }
+}
+
+/* ===== Manual Light Mode Override ===== */
+[data-theme="light"] {
+    /* Core colors */
+    --color-bg: #ffffff;
+    --color-text-main: #404040;
+    --color-text-secondary: #a3a3a3;
+    --color-text-muted: gray;
+    --color-primary: #0085a1;
+    --color-primary-light: #337ab7;
+    --color-border: #eee;
+    --color-border-light: #f2f2f2;
+    --color-border-dark: #ddd;
+
+    /* Background colors */
+    --bg-input: #ffffff;
+    --bg-tag-cloud: #D6D6D6;
+    --bg-catalog-active: #f5f5f5;
+    --bg-mobile-menu: #ffffff;
+    --bg-tag-active: rgba(255, 255, 255, 0.4);
+    --bg-tag-invert: rgba(0, 0, 0, 0.05);
+    --bg-pager: #ffffff;
+    --bg-disabled: #404040;
+
+    /* Sidebar colors */
+    --sidebar-text: #bfbfbf;
+    --sidebar-heading: gray;
+
+    /* Navbar colors */
+    --navbar-bg: transparent;
+    --navbar-text: #404040;
+    --navbar-text-hover: #0085a1;
+    --navbar-toggle-icon: #ffffff;
+    --navbar-toggle-icon-invert: #404040;
+
+    /* Link colors */
+    --link-color: #404040;
+    --link-color-post: #337ab7;
+    --link-hover: #0085a1;
+
+    /* Tag colors */
+    --tag-border: rgba(255, 255, 255, 0.8);
+    --tag-text: #ffffff;
+    --tag-border-hover: #ffffff;
+
+    /* Button colors */
+    --btn-default-bg: transparent;
+    --btn-default-hover: #0085a1;
+    --btn-default-text: #404040;
+
+    /* Other UI elements */
+    --caption-text: inherit;
+    --copyright-link: #337ab7;
+    --pager-disabled: gray;
+    --selection-bg: #0085a1;
+    --selection-text: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.258824);
+    --mobile-menu-shadow: rgba(0, 0, 0, 0.117647);
+    --mobile-menu-shadow-2: rgba(0, 0, 0, 0.239216);
+    --tagcloud-start: #bbbbee;
+    --tagcloud-end: #0085a1;
+}
+
+/* ===== Manual Dark Mode Override ===== */
+[data-theme="dark"] {
+    /* Core colors - Jimmy Song's dark theme */
+    --color-bg: #040b1b;
+    --color-text-main: #c9d1d9;
+    --color-text-secondary: #a4b2ce;
+    --color-text-muted: #8b9db3;
+    --color-primary: #7fb4ff;
+    --color-primary-light: #9ec5ff;
+    --color-border: rgba(148, 197, 255, 0.18);
+    --color-border-light: rgba(148, 197, 255, 0.1);
+    --color-border-dark: rgba(148, 197, 255, 0.25);
+
+    /* Background colors */
+    --bg-input: #081123;
+    --bg-tag-cloud: rgba(7, 14, 30, 0.75);
+    --bg-catalog-active: rgba(8, 17, 35, 0.78);
+    --bg-mobile-menu: rgba(7, 14, 30, 0.84);
+    --bg-tag-active: rgba(126, 190, 255, 0.15);
+    --bg-tag-invert: rgba(126, 190, 255, 0.1);
+    --bg-pager: rgba(8, 17, 35, 0.78);
+    --bg-disabled: rgba(12, 21, 40, 0.68);
+
+    /* Sidebar colors */
+    --sidebar-text: #a4b2ce;
+    --sidebar-heading: #eff4ff;
+
+    /* Navbar colors */
+    --navbar-bg: transparent;
+    --navbar-text: #404040;
+    --navbar-text-hover: #0085a1;
+    --navbar-toggle-icon: #ffffff;
+    --navbar-toggle-icon-invert: #404040;
+
+    /* Link colors */
+    --link-color: #7fb4ff;
+    --link-color-post: #9ec5ff;
+    --link-hover: #7fb4ff;
+
+    /* Tag colors */
+    --tag-border: rgba(126, 190, 255, 0.4);
+    --tag-text: #eff4ff;
+    --tag-border-hover: #7fb4ff;
+
+    /* Button colors */
+    --btn-default-bg: transparent;
+    --btn-default-hover: #4f8cff;
+    --btn-default-text: #c9d1d9;
+
+    /* Other UI elements */
+    --caption-text: #a4b2ce;
+    --copyright-link: #7fb4ff;
+    --pager-disabled: rgba(164, 178, 206, 0.5);
+    --selection-bg: #4f8cff;
+    --selection-text: #ffffff;
+    --shadow-color: rgba(1, 4, 18, 0.58);
+    --mobile-menu-shadow: rgba(2, 6, 18, 0.62);
+    --mobile-menu-shadow-2: rgba(1, 5, 20, 0.68);
+    --tagcloud-start: rgba(164, 178, 206, 0.7);
+    --tagcloud-end: #7fb4ff;
+}
+
+/* ===== Apply smooth transitions ===== */
+* {
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+}
+
+/* Disable transitions during theme switch */
+.theme-switching * {
+    transition: none !important;
+}
+
+/* ===== Override Bootstrap hardcoded colors ===== */
+/* Only override body and navbar - preserve background images on other elements */
+body {
+    background-color: var(--color-bg) !important;
+}
+
+/* Override specific Bootstrap elements that don't have background images */
+.panel,
+.panel-heading,
+.panel-body,
+.panel-footer,
+.well,
+.thumbnail,
+.modal-content,
+.dropdown-menu {
+    background-color: var(--color-bg) !important;
+}
+
+/* Override input backgrounds */
+input,
+textarea,
+select {
+    background-color: var(--bg-input) !important;
+    color: var(--color-text-main) !important;
+}
+
+/* Override button backgrounds */
+.btn-default {
+    background-color: var(--btn-default-bg) !important;
+    color: var(--btn-default-text) !important;
+    border-color: var(--color-border) !important;
+}
+
+.btn-default:hover {
+    background-color: var(--btn-default-hover) !important;
+    color: #ffffff !important;
+}
+
+/* ===== Print styles - always light mode ===== */
+@media print {
+    :root,
+    [data-theme="dark"] {
+        --color-bg: #ffffff;
+        --color-text-main: #000000;
+        --color-text-secondary: #404040;
+        --color-text-muted: #404040;
+        --color-primary: #0085a1;
+        --color-border: #ddd;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
+
+/* ===== Comment Section Dark Mode ===== */
+[data-theme="dark"] .comment,
+[data-theme="dark"] #ds-thread,
+[data-theme="dark"] .gitalk-container,
+[data-theme="dark"] .utterances,
+[data-theme="dark"] .vwrap,
+[data-theme="dark"] .v {
+    background: rgba(8, 17, 35, 0.6) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .ds-textarea-wrapper,
+[data-theme="dark"] .ds-thread,
+[data-theme="dark"] .ds-replybox,
+[data-theme="dark"] textarea,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="url"] {
+    background: rgba(7, 14, 30, 0.75) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] .ds-post-toolbar,
+[data-theme="dark"] .ds-actions,
+[data-theme="dark"] .ds-toolbar {
+    background: rgba(7, 14, 30, 0.75) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .ds-comment-body,
+[data-theme="dark"] .ds-comment-context,
+[data-theme="dark"] p,
+[data-theme="dark"] .comment-body {
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] .ds-comment-footer,
+[data-theme="dark"] .ds-time,
+[data-theme="dark"] .ds-comment-meta {
+    color: #a4b2ce !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] .ds-user-name,
+[data-theme="dark"] .ds-link {
+    color: #7fb4ff !important;
+}
+
+[data-theme="dark"] a:hover,
+[data-theme="dark"] .ds-user-name:hover {
+    color: #9ec5ff !important;
+}
+
+[data-theme="dark"] button,
+[data-theme="dark"] .ds-post-button,
+[data-theme="dark"] .ds-like-thread-button,
+[data-theme="dark"] .btn-primary {
+    background: #4f8cff !important;
+    border-color: #4f8cff !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] button:hover,
+[data-theme="dark"] .ds-post-button:hover,
+[data-theme="dark"] .btn-primary:hover {
+    background: #7fb4ff !important;
+    border-color: #7fb4ff !important;
+}
+
+[data-theme="dark"] .ds-tab a,
+[data-theme="dark"] .ds-sort {
+    color: #a4b2ce !important;
+    background: transparent !important;
+}
+
+[data-theme="dark"] .ds-tab a.ds-current,
+[data-theme="dark"] .ds-tab a:hover {
+    color: #7fb4ff !important;
+    background: rgba(126, 190, 255, 0.1) !important;
+    border-color: rgba(126, 190, 255, 0.3) !important;
+}
+
+/* Gitalk specific dark mode */
+[data-theme="dark"] .gitalk-editor-area,
+[data-theme="dark"] .gitalk-markdown,
+[data-theme="dark"] .markdown-body {
+    background: rgba(7, 14, 30, 0.75) !important;
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] .gitalk-container .gitalk-header,
+[data-theme="dark"] .gitalk-container .gitalk-footer {
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .gitalk-container svg {
+    fill: #a4b2ce !important;
+}
+
+[data-theme="dark"] .gitalk-item {
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .markdown-body h1,
+[data-theme="dark"] .markdown-body h2,
+[data-theme="dark"] .markdown-body h3,
+[data-theme="dark"] .markdown-body h4,
+[data-theme="dark"] .markdown-body h5,
+[data-theme="dark"] .markdown-body h6 {
+    color: #eff4ff !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .markdown-body code,
+[data-theme="dark"] .markdown-body pre {
+    background: rgba(3, 8, 20, 0.95) !important;
+    border-color: rgba(148, 197, 255, 0.22) !important;
+    color: #93c5fd !important;
+}
+
+[data-theme="dark"] .markdown-body blockquote {
+    border-color: rgba(126, 190, 255, 0.3) !important;
+    color: #a4b2ce !important;
+    background: rgba(7, 14, 30, 0.5) !important;
+}
+
+[data-theme="dark"] .markdown-body hr {
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .markdown-body table {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .markdown-body table tr {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .markdown-body table tr:hover {
+    background: rgba(126, 190, 255, 0.1) !important;
+}
+
+/* ===== List Items in Dark Mode ===== */
+[data-theme="dark"] ul,
+[data-theme="dark"] ol,
+[data-theme="dark"] li {
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] .post-container ul,
+[data-theme="dark"] .post-container ol {
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] .post-container li,
+[data-theme="dark"] .post-container li p {
+    color: #c9d1d9 !important;
+}
+
+[data-theme="dark"] ul li::marker,
+[data-theme="dark"] ol li::marker {
+    color: #7fb4ff !important;
+}
+
+[data-theme="dark"] .post-container ul li::marker,
+[data-theme="dark"] .post-container ol li::marker {
+    color: #7fb4ff !important;
+}
+
+/* ===== Navbar - Dark Mode Styling ===== */
+/* Navbar background - default transparent */
+[data-theme="dark"] .navbar-custom:not(.is-fixed),
+[data-theme="dark"] .navbar-default:not(.is-fixed) {
+    background-color: transparent !important;
+}
+
+/* Default state (not scrolled) - white text on transparent background */
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .navbar-brand,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .navbar-nav > li > a,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .nav li a,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) #theme-toggle {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .navbar-brand:hover,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .navbar-nav > li > a:hover,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .nav li a:hover,
+[data-theme="dark"] .navbar-custom:not(.is-fixed) #theme-toggle:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+[data-theme="dark"] .navbar-custom:not(.is-fixed) .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar-custom:not(.is-fixed) #theme-toggle i {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Fixed/scrolling state - dark text on white background */
+[data-theme="dark"] .navbar-custom.is-fixed {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand {
+    color: rgba(40, 40, 40, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand:focus {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-nav > li > a,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a {
+    color: rgba(40, 40, 40, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-nav > li > a:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-nav > li > a:focus,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a:focus {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-toggle .icon-bar {
+    background-color: #404040 !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle,
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle i {
+    color: rgba(40, 40, 40, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle:hover,
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle:focus {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+/* Remove background from theme toggle button in dark mode */
+[data-theme="dark"] .navbar-custom #theme-toggle,
+[data-theme="dark"] .navbar-custom #theme-toggle:hover,
+[data-theme="dark"] .navbar-custom #theme-toggle:focus,
+[data-theme="dark"] .navbar-custom #theme-toggle:active,
+[data-theme="dark"] .nav li a#theme-toggle,
+[data-theme="dark"] .nav li a#theme-toggle:hover,
+[data-theme="dark"] .nav li a#theme-toggle:focus,
+[data-theme="dark"] .nav li a#theme-toggle:active {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle,
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle:hover,
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle:focus,
+[data-theme="dark"] .navbar-custom.is-fixed #theme-toggle:active,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a#theme-toggle,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a#theme-toggle:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a#theme-toggle:focus,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a#theme-toggle:active {
+    background: transparent !important;
+}
+
+/* ===== Pagination/Previous-Next Post Buttons in Dark Mode ===== */
+[data-theme="dark"] .pager,
+[data-theme="dark"] .pagination,
+[data-theme="dark"] .pager li > a,
+[data-theme="dark"] .pager li > span,
+[data-theme="dark"] .pagination > li > a,
+[data-theme="dark"] .pagination > li > span {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .pager li > a,
+[data-theme="dark"] .pagination > li > a {
+    color: #7fb4ff !important;
+}
+
+[data-theme="dark"] .pager li > a:hover,
+[data-theme="dark"] .pagination > li > a:hover {
+    background: rgba(126, 190, 255, 0.15) !important;
+    border-color: rgba(126, 190, 255, 0.3) !important;
+    color: #9ec5ff !important;
+}
+
+[data-theme="dark"] .pager .disabled > a,
+[data-theme="dark"] .pager .disabled > span,
+[data-theme="dark"] .pagination > .disabled > a,
+[data-theme="dark"] .pagination > .disabled > span {
+    background: rgba(8, 17, 35, 0.5) !important;
+    color: rgba(164, 178, 206, 0.5) !important;
+    border-color: rgba(148, 197, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .pager li > span,
+[data-theme="dark"] .pagination > .active > a,
+[data-theme="dark"] .pagination > .active > span {
+    background: rgba(126, 190, 255, 0.2) !important;
+    color: #eff4ff !important;
+    border-color: rgba(126, 190, 255, 0.4) !important;
+}
+
+/* ===== Code Blocks in Dark Mode ===== */
+[data-theme="dark"] code,
+[data-theme="dark"] pre,
+[data-theme="dark"] pre code,
+[data-theme="dark"] .highlight,
+[data-theme="dark"] .chroma {
+    background: rgba(3, 8, 20, 0.95) !important;
+    color: #93c5fd !important;
+    border-color: rgba(148, 197, 255, 0.22) !important;
+}
+
+[data-theme="dark"] .post-container pre,
+[data-theme="dark"] .post-container code {
+    background: rgba(3, 8, 20, 0.95) !important;
+    border-color: rgba(148, 197, 255, 0.22) !important;
+}
+
+[data-theme="dark"] pre {
+    background: rgba(3, 8, 20, 0.95) !important;
+    border: 1px solid rgba(148, 197, 255, 0.22) !important;
+}
+
+[data-theme="dark"] code {
+    background: rgba(3, 8, 20, 0.8) !important;
+    color: #93c5fd !important;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+[data-theme="dark"] pre code {
+    background: transparent !important;
+    padding: 0;
+}
+
+/* Code block header/footer if present */
+[data-theme="dark"] .code-header,
+[data-theme="dark"] .code-footer {
+    background: rgba(7, 14, 30, 0.75) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}
+
+[data-theme="dark"] .filename,
+[data-theme="dark"] .lang {
+    color: #a4b2ce !important;
+}
+
+/* ===== Header Section - Keep Daylight Colors (for background image visibility) ===== */
+[data-theme="dark"] .intro-header,
+[data-theme="dark"] .intro-header * {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .intro-header .site-heading h1,
+[data-theme="dark"] .intro-header .post-heading h1,
+[data-theme="dark"] .intro-header .page-heading h1 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .intro-header .subheading,
+[data-theme="dark"] .intro-header .meta,
+[data-theme="dark"] .intro-header .meta a {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .intro-header .meta a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="dark"] .intro-header .tags a,
+[data-theme="dark"] .intro-header .tags .tag {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .intro-header .tags a:hover,
+[data-theme="dark"] .intro-header .tags .tag:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ===== Heading Colors in Dark Mode ===== */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: #eff4ff !important;
+}
+
+[data-theme="dark"] .post-container h1,
+[data-theme="dark"] .post-container h2,
+[data-theme="dark"] .post-container h3,
+[data-theme="dark"] .post-container h4,
+[data-theme="dark"] .post-container h5,
+[data-theme="dark"] .post-container h6 {
+    color: #eff4ff !important;
+}
+
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .section-heading,
+[data-theme="dark"] .site-heading,
+[data-theme="dark"] .page-heading,
+[data-theme="dark"] .post-heading {
+    color: #eff4ff !important;
+}
+
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .subheading {
+    color: #a4b2ce !important;
+}
