@@ -3,21 +3,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Anti-FOC (Flash of Content) Script for Dark Mode -->
+    <!-- Anti-FOC (Flash of Content) Script for Dark Mode - MUST run first -->
     <script>
     (function() {
+        // Determine theme BEFORE any rendering
+        // Priority: 1) localStorage preference, 2) system preference
+        const theme = localStorage.getItem('cleanwhite-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const finalTheme = theme || (systemPrefersDark ? 'dark' : 'light');
+
+        // Set theme immediately
+        document.documentElement.setAttribute('data-theme', finalTheme);
+
         // Auto-theme (sunrise/sunset) is enabled by default
-        // Can be disabled by setting auto_theme: false in config
         const autoTheme = {{ if not .Site.Params.auto_theme }}false{{ else }}true{{ end }};
         if (autoTheme) {
             document.documentElement.setAttribute('data-auto-theme', 'true');
         }
 
-        const theme = localStorage.getItem('cleanwhite-theme') ||
-                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
+        // Show content when body is available
+        function showContent() {
+            if (document.body) {
+                document.body.classList.add('theme-loaded');
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showContent);
+        } else {
+            // DOM might already be loaded, try immediately
+            showContent();
+        }
     })();
     </script>
+
+    <!-- Anti-FOC (Flash of Content) Styles for Dark Mode -->
+    <style>
+        /* Hide body initially to prevent flash */
+        body { visibility: hidden; }
+
+        /* Critical theme colors - these apply via data-theme attribute */
+        html {
+            background-color: #ffffff;
+            color: #404040;
+        }
+
+        /* Dark mode - applies when JS sets data-theme="dark" */
+        [data-theme="dark"] {
+            background-color: #040b1b !important;
+            color: #c9d1d9 !important;
+        }
+        [data-theme="dark"] body {
+            background-color: #040b1b !important;
+        }
+
+        /* Light mode - applies when JS sets data-theme="light" */
+        [data-theme="light"] {
+            background-color: #ffffff !important;
+            color: #404040 !important;
+        }
+        [data-theme="light"] body {
+            background-color: #ffffff !important;
+        }
+
+        /* Show body once theme is applied */
+        body.theme-loaded { visibility: visible; }
+    </style>
+
+    <noscript>
+        <style>
+            /* Fallback for no JavaScript - default to light */
+            body { visibility: visible !important; }
+        </style>
+    </noscript>
 
     <!-- start ogp -->
     <meta property="og:site_name" content="{{ .Site.Title }}">

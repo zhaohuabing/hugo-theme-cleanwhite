@@ -122,6 +122,24 @@ const ThemeManager = (function() {
         const toggleBtn = document.getElementById('theme-toggle');
         if (!toggleBtn) return;
 
+        const moonIcon = toggleBtn.querySelector('.fa-moon');
+        const sunIcon = toggleBtn.querySelector('.fa-sun');
+
+        // Handle new method (both icons present, show/hide)
+        if (moonIcon && sunIcon) {
+            if (theme === THEMES.DARK) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                toggleBtn.setAttribute('title', 'Switch to light mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                toggleBtn.setAttribute('title', 'Switch to dark mode');
+            }
+            return;
+        }
+
+        // Handle old method (single icon, swap classes)
         const icon = toggleBtn.querySelector('i');
         if (!icon) return;
 
