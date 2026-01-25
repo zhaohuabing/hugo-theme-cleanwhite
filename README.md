@@ -55,10 +55,10 @@ If your site is already a git project, you may want to choose to add the cleanwh
 $ mkdir themes
 $ git submodule add https://github.com/zhaohuabing/hugo-theme-cleanwhite.git themes/hugo-theme-cleanwhite
 ```
-Run  Hugo Build-in Server Locally
+Run Hugo Built-in Server Locally
 
 ```
-$ hugo server -t  hugo-theme-cleanwhite
+$ hugo server -t hugo-theme-cleanwhite
 ```
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
@@ -108,7 +108,7 @@ The client side java script has already been integrated to CleanWhite them, but 
 
 The proxy is written in php, which can be found here: https://github.com/zhaohuabing/disqus-php-api/tree/master/api
 
-You need to specify  your Disqus account information in the config.php.
+You need to specify your Disqus account information in the config.php.
 ```
 define('PUBLIC_KEY', '');
 define('SECRET_KEY', '');
@@ -187,7 +187,7 @@ Leave the `id` key empty to disable it.
 You can optionally enable Baidu Analytics. Type your tracking code in the
 
 ```toml
-ba_track_id  = "XXXXXXXXXXXXXXXX"
+ba_track_id = "XXXXXXXXXXXXXXXX"
 ```
 Leave the 'ba_track_id ' key empty to disable it.
 
@@ -208,7 +208,7 @@ reward = true
 
 ### Mind Map
 
-Mind Map is supported with shortcode 'mind', instering the following code snippet into  your markdown file can create a mind map showing in the screenshots.
+Mind Map is supported with shortcode 'mind', inserting the following code snippet into your markdown file can create a mind map showing in the screenshots.
 
 ```markdown
 {{% mind %}}
@@ -257,7 +257,7 @@ Vimeo
 
 ### Plantuml
 
-Plantuml support can be enabled at site or page level by adding the following line in the config.yaml or page header.
+Plantuml support can be enabled at site or page level by adding the following line in the hugo.yaml or page header.
 
 ```
 plantuml: true
@@ -294,7 +294,7 @@ CleanWhite theme comes with built-in dark mode support that automatically switch
 
 #### Configuration
 
-Dark mode is **enabled by default** with automatic sunrise/sunset switching. You can configure it in your `config.yaml`:
+Dark mode is **enabled by default** with automatic sunrise/sunset switching. You can configure it in your `hugo.yaml`:
 
 ```yaml
 params:
