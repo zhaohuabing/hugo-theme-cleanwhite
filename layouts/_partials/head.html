@@ -21,31 +21,24 @@
             document.documentElement.setAttribute('data-auto-theme', 'true');
         }
 
-        // Show content when body is available
-        function showContent() {
-            if (document.body) {
-                document.body.classList.add('theme-loaded');
-            }
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', showContent);
+        // Set inline styles for immediate effect
+        if (finalTheme === 'dark') {
+            document.documentElement.style.backgroundColor = '#040b1b';
+            document.documentElement.style.color = '#c9d1d9';
         } else {
-            // DOM might already be loaded, try immediately
-            showContent();
+            document.documentElement.style.backgroundColor = '#ffffff';
+            document.documentElement.style.color = '#404040';
         }
     })();
     </script>
 
     <!-- Anti-FOC (Flash of Content) Styles for Dark Mode -->
     <style>
-        /* Hide body initially to prevent flash */
-        body { visibility: hidden; }
-
         /* Critical theme colors - these apply via data-theme attribute */
         html {
             background-color: #ffffff;
             color: #404040;
+            transition: background-color 0.15s ease, color 0.15s ease;
         }
 
         /* Dark mode - applies when JS sets data-theme="dark" */
@@ -65,15 +58,12 @@
         [data-theme="light"] body {
             background-color: #ffffff !important;
         }
-
-        /* Show body once theme is applied */
-        body.theme-loaded { visibility: visible; }
     </style>
 
     <noscript>
         <style>
             /* Fallback for no JavaScript - default to light */
-            body { visibility: visible !important; }
+            html { background-color: #ffffff !important; }
         </style>
     </noscript>
 
